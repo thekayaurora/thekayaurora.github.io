@@ -1,0 +1,51 @@
+---
+import Greeting from '../components/Greeting.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Clyron's Website! (public beta)" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="../../logo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+		<title>{ title }</title>
+        <style is:global>
+            @font-face {
+                font-family: "asap";
+                src: url("../components/fonts/asap.ttf");
+            }
+            
+            html, body {
+                background-color: #2d3339;
+                color: #ccdae8;
+                font-family: "asap", sans-serif;
+                }
+            a {
+                text-decoration: underline;
+                }
+    </style>
+	</head>
+	<body>
+        <div class="grid justify-center" id="logo">
+            <div class="size-36 p-4"><img src="../../logo.png"></div>
+          </div>
+          <div class="grid justify-center" id="toptext">
+         <div class="text-2xl italic">I am just a semi-average internet user~</div>
+         </div>
+         <div class="box-border border-2 p-4 m-4">
+          <div class="grid justify-center" id="navbar">
+             <div class="text-lg m-1"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
+          </div>
+		<slot />
+        <div><noscript><div class="text-base font-semibold italic m-1">⚠️ JavaScript is disabled, some website functionality may be limited</div></noscript></div>
+     <div><div class="text-base font-semibold italic m-1">🚧 This website is under construction. Please report any bugs or other issues by opening a <a href="https://github.com/theclyron/new-website/issues">GitHub issue</a></div></div>
+	</body>
+</html>
