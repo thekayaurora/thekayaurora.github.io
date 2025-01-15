@@ -1,0 +1,16 @@
+---
+interface Props {
+	name: string;
+	icon: string;
+	type: string;
+	href: string;
+	desc: string;
+}
+
+const { name, icon, type, href, desc } = Astro.props;
+---
+<div class="box-border border-2 rounded-2xl p-4 m-4">
+	<div class="text-2xl"><i class={icon}></i> <a href={href}>{name}</a></div>
+	<div class="text-lg">{type}</div>
+	<div class="text-base">{desc}</div>
+   </div>
