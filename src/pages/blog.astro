@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const posts = Object.values(import.meta.glob("../content/blog/*.md", { eager: true }));
+const posts = Object.values(import.meta.glob("../pages/blog/*.md", { eager: true }));
 ---
 <Layout
    title="Clyron">
@@ -8,5 +8,11 @@ const posts = Object.values(import.meta.glob("../content/blog/*.md", { eager: tr
    <div class="text-base">
       <p>My space for long-form thoughts.</p>
    </div>
-      <br><p>Not implemented. For the time being please check out <a href="https://clyron.is-a.dev/blog">the legacy Jekyll-based blog <i class="fas fa-arrow-up-right-from-square"></i></a></p>
+    {posts.map((post: any) => 
+    <div class="box-border border-2 rounded-2xl p-4 m-4">
+        <div class="text-2xl"><a href={post.url}>{post.frontmatter.title}</a></div>
+        <div class="text-lg">{post.frontmatter.date}</div>
+        <div class="text-base">{post.frontmatter.desc}</div>
+       </div>
+    )}
 </Layout>

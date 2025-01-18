@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="description" content="Clyron's Website! (public beta)" />
 		<link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/website-exp/logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
 		<title>Clyron</title>
         <style is:global>
             @font-face {
@@ -39,7 +39,7 @@ const { title } = Astro.props;
                 animation: gradient 7.5s ease-in infinite;
                 background-size: 400% 400%;
                 background-color: #2d3339;
-                color: #ccdae8;
+                color: #dce8f4;
                 font-family: "asap", sans-serif;
                 font-size: 1.1em
                 }
@@ -53,15 +53,15 @@ const { title } = Astro.props;
             <div class="size-36 p-4"><img src="https://clyron.is-a.dev/website-exp/logo.png"></div>
           </div>
           <div class="grid justify-center" id="toptext">
-         <div class="md:text-2xl italic">I am just a semi-average internet user~</div>
+         <div class="sm:text-2xl italic">I am just a semi-average internet user~</div>
          </div>
-         <div class="box-border border-2 rounded-3xl p-4 md:ml-10 md:mr-10 mt-4">
+         <div class="box-border border-2 rounded-3xl p-4 sm:ml-10 sm:mr-10 md:ml-15 md:mr-15 lg:ml-20 lg:mr-20 mt-4">
           <div class="grid justify-center" id="navbar">
              <div class="text-lg m-1"><a href="/website-exp/">Home</a> ・ <a href="/website-exp/projects">Projects</a> ・ <a href="/website-exp/socials">Socials</a> ・ <a href="/website-exp/blog">Blog</a></div>
           </div>
 		<slot />
         <div><noscript><div class="text-base font-semibold italic m-1">⚠️ JavaScript is disabled, some website functionality may be limited</div></noscript></div>
      <div><div class="text-base font-semibold italic m-1">🚧 This website is under construction. Please report any bugs or other issues by opening a <a href="https://github.com/theclyron/website-exp/issues">GitHub issue</a></div></div>
-     <div><div class="text-base font-semibold italic m-1">💻 clyron-website v1.1-beta3</div></div>
+     <div><div class="text-base font-semibold italic m-1">💻 clyron-website v1.1-beta4</div></div>
 	</body>
 </html>
