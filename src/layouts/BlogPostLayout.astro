@@ -16,10 +16,50 @@ const { frontmatter } = Astro.props;
         <link rel="stylesheet" href="https://clyron.is-a.dev/website-exp/src/components/style.css" type="text/css">
 		<title>{frontmatter.title} ~ Clyron</title>
 	</head>
-    <!-- temporary since this only wants to work when directly on the css --> <style is:global>
-        a {
-     text-decoration: underline;
-     }
+ <!-- fallback --> <style is:global>
+     @font-face {
+    font-family: "asap";
+    src: url("../components/fonts/asap.ttf");
+      }
+    @keyframes gradient {
+0% {
+    background-position: 0% 50%;
+  }
+50% {
+    background-position: 100% 50%;
+   }
+100% {
+    background-position: 0% 50%;
+   }
+  }
+html, body {
+    background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(57, 51, 45, .5));
+    animation: gradient 7.5s ease-in infinite;
+    background-size: 400% 400%;
+    background-color: #2d3339;
+    color: #dce8f4;
+    font-family: "asap", sans-serif;
+    font-size: 1.1em
+    }
+a {
+    text-decoration: underline;
+    }
+a.button {
+      background-color: rgb(59, 69, 79);
+      color: #dce8f4;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 15px 15px 15px 15px;
+      border: 15px 15px 15px 15px white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
+  }
+  a.button:hover, .navbtn:hover {
+    background-color: rgb(53, 61, 69);
+}
   </style>
 	<body>
         <div class="grid justify-center" id="logo">
