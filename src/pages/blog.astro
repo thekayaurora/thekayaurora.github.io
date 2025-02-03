@@ -8,11 +8,14 @@ const posts = Object.values(import.meta.glob("../pages/blog/*.md", { eager: true
    <div class="text-base">
       <p>My space for long-form thoughts.</p>
    </div>
+   <div class="grid md:grid-cols-2 md:p-4">
     {posts.map((post: any) => 
     <div class="box-border border-2 rounded-2xl p-4 m-4">
-        <div class="text-2xl"><a href={post.url}>{post.frontmatter.title}</a></div>
+        <div class="text-2xl">{post.frontmatter.title}</div>
         <div class="text-lg">{post.frontmatter.date}</div>
-        <div class="text-base">{post.frontmatter.desc}</div>
+        <div class="text-base italic">{post.frontmatter.desc}</div>
+        <div class="text-base"><a class="button" href={post.url}>Read</a></div>
        </div>
     )}
+    </div>
 </Layout>

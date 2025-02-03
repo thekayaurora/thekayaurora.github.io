@@ -1,7 +1,7 @@
 {
   "name": "clyronwebsite",
   "type": "module",
-  "version": "1.1",
+  "version": "2.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

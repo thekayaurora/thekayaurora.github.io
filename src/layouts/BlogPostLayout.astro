@@ -13,37 +13,14 @@ const { frontmatter } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/website-exp/logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
+        <link rel="stylesheet" href="/src/components/style.css" type="text/css">
 		<title>{frontmatter.title} ~ Clyron</title>
-        <style is:global>
-            @font-face {
-                font-family: "asap";
-                src: url("../components/fonts/asap.ttf");
-            }
-            @keyframes gradient {
-           0% {
-                background-position: 0% 50%;
-              }
-           50% {
-                background-position: 100% 50%;
-               }
-           100% {
-                background-position: 0% 50%;
-               }
-              }
-            html, body {
-                background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(57, 51, 45, .5));
-                animation: gradient 7.5s ease-in infinite;
-                background-size: 400% 400%;
-                background-color: #2d3339;
-                color: #dce8f4;
-                font-family: "asap", sans-serif;
-                font-size: 1.1em
-                }
-            a {
-                text-decoration: underline;
-                }
-    </style>
 	</head>
+    <!-- temporary since this only wants to work when directly on the css --> <style is:global>
+        a {
+     text-decoration: underline;
+     }
+  </style>
 	<body>
         <div class="grid justify-center" id="logo">
             <div class="size-36 p-4"><img src="https://clyron.is-a.dev/website-exp/logo.png"></div>
@@ -53,13 +30,13 @@ const { frontmatter } = Astro.props;
          </div>
          <div class="box-border border-2 rounded-3xl p-4 sm:ml-10 sm:mr-10 md:ml-15 md:mr-15 lg:ml-20 lg:mr-20 mt-4">
           <div class="grid justify-center" id="navbar">
-             <div class="text-lg m-1"><a href="/website-exp/">Home</a> ・ <a href="/website-exp/projects">Projects</a> ・ <a href="/website-exp/socials">Socials</a> ・ <a href="/website-exp/blog">Blog</a></div>
+             <div class="text-lg m-1"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
           </div>
           <div class="grid justify-items-center" id="blogpost">
             <div class="text-3xl font-semibold m-1">{frontmatter.title}</div>
             <div class="text-base font-semibold m-1">{frontmatter.date} ・ {frontmatter.desc} <!--<a href=""><i class="fas fa-rss"></i></a>--></div>
          </div>
-         <div class="prose prose-invert prose-img:md:max-h-[750px] prose-img:md:max-w-[750px] max-w-none pt-4">
+         <div class="prose prose-invert prose-img:md:max-h-[750px] prose-img:md:max-w-[750px] <!--max-w-[1000px]--> max-w-none pt-4">
 		<slot />
         </div>
 	</body>
