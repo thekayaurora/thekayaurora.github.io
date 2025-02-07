@@ -36,7 +36,7 @@ a.button {
       border: 15px 15px 15px 15px white;
       font-weight: bold;
       text-decoration: none;
-      transition: 0.21s;
+      transition: 0.2s;
   }
   a.button:hover, .navbtn:hover {
     background-color: rgb(53, 61, 69);

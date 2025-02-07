@@ -2,7 +2,6 @@
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -13,14 +12,14 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="theme-color" content="#d9826bs">
         <meta property="og:image" content="https://clyron.is-a.dev/website-exp/logo.png">
-		<meta name="description" content="Clyron's Website! (public beta)" />
-		<link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/website-exp/logo.png" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
+		    <meta name="description" content="Clyron's Website" />
+		    <link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/website-exp/logo.png" />
+		    <meta name="generator" content={Astro.generator} />
+		    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
         <link rel="stylesheet" href="https://clyron.is-a.dev/website-exp/src/components/style.css" type="text/css">
 		<title>Clyron</title>
 	</head>
- <!-- fallback --> <style is:global>
+    <!-- fallback --> <style is:global>
      @font-face {
     font-family: "asap";
     src: url("../components/fonts/asap.ttf");
@@ -78,7 +77,5 @@ a.button {
           </div>
 		<slot />
         <div><noscript><div class="text-base font-semibold italic m-1">⚠️ JavaScript is disabled, some website functionality may be limited</div></noscript></div>
-     <div><div class="text-base font-semibold italic m-1">🚧 This website is under construction. Please report any bugs or other issues by opening a <a href="https://github.com/theclyron/website-exp/issues">GitHub issue</a></div></div>
-     <div><div class="text-base font-semibold italic m-1">💻 clyron-website v2.0-beta030225</div></div>
 	</body>
 </html>
