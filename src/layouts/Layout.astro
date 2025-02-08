@@ -11,6 +11,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="theme-color" content="#d9826bs">
+        <meta property="og:color" content="#d9826bs">
         <meta property="og:image" content="https://clyron.is-a.dev/website-exp/logo.png">
 		    <meta name="description" content="Clyron's Website" />
 		    <link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/website-exp/logo.png" />
@@ -73,7 +74,7 @@ a.button {
          </div>
          <div class="box-border border-2 rounded-3xl p-4 sm:ml-10 sm:mr-10 md:ml-15 md:mr-15 lg:ml-20 lg:mr-20 mt-4">
           <div class="grid justify-center" id="navbar">
-             <div class="text-lg m-1"><a href="/website-exp/">Home</a> ・ <a href="/website-exp/projects">Projects</a> ・ <a href="/website-exp/socials">Socials</a> ・ <a href="/website-exp/blog">Blog</a></div>
+             <div class="text-lg m-1"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
           </div>
 		<slot />
         <div><noscript><div class="text-base font-semibold italic m-1">⚠️ JavaScript is disabled, some website functionality may be limited</div></noscript></div>

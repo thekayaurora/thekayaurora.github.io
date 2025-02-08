@@ -8,6 +8,7 @@ const { frontmatter } = Astro.props;
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#d9826bs">
+    <meta property="og:color" content="#d9826bs">
     <meta property="og:image" content="https://clyron.is-a.dev/website-exp/logo.png">
 		<meta name="description" content={frontmatter.desc} />
 		<link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/website-exp/logo.png" />
@@ -34,7 +35,7 @@ const { frontmatter } = Astro.props;
   }
 html, body {
     background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(57, 51, 45, .5));
-    animation: gradient 7.5s ease-in infinite;
+
     background-size: 400% 400%;
     background-color: #2d3339;
     color: #dce8f4;
@@ -68,16 +69,18 @@ a.button {
           <div class="grid justify-center" id="toptext">
          <div class="md:text-2xl italic">I am just a semi-average internet user~</div>
          </div>
-         <div class="box-border border-2 rounded-3xl p-4 sm:ml-10 sm:mr-10 md:ml-15 md:mr-15 lg:ml-20 lg:mr-20 mt-4">
+         <div class="box-border border-2 rounded-3xl p-4 sm:ml-10 sm:mr-10 md:ml-15 md:mr-15 lg:ml-40 lg:mr-40 mt-4">
           <div class="grid justify-center" id="navbar">
-             <div class="text-lg m-1"><a href="/website-exp/">Home</a> ・ <a href="/website-exp/projects">Projects</a> ・ <a href="/website-exp/socials">Socials</a> ・ <a href="/website-exp/blog">Blog</a></div>
+             <div class="text-lg m-1"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
           </div>
           <div class="grid justify-items-center" id="blogpost">
-            <div class="text-3xl font-semibold m-1">{frontmatter.title}</div>
-            <div class="text-base font-semibold m-1">{frontmatter.date} ・ {frontmatter.desc} <!--<a href=""><i class="fas fa-rss"></i></a>--></div>
+            <div class="text-3xl font-semibold">{frontmatter.title}</div>
+            <div class="text-base font-semibold">{frontmatter.date} ・ <i>{frontmatter.desc || 'No description available'}</i></div>
          </div>
-         <div class="prose prose-invert prose-img:md:max-h-[750px] prose-img:md:max-w-[750px] <!--max-w-[1000px]--> max-w-none pt-4">
-		<slot />
-        </div>
+         <div>
+           <div class="prose prose-invert prose-img:md:max-h-[750px] prose-img:md:max-w-[750px] max-w-[1000px] max-w-none pt-4 mx-auto text-left">
+	        	<slot />
+           </div>
+         </div>
 	</body>
 </html>
