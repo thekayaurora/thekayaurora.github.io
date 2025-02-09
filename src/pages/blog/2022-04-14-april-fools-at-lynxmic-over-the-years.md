@@ -8,7 +8,7 @@ date: 14 April 2022
 
 Okay, okay, that was only a reference to the [first blog post of 2018][1], where I talked about my Discord server, Axeon ([click/tap here][2] to join if interested, we mostly talk tech & gaming stuff) which at the time was still new and growing, and known as Aqua. And yes, this is seriously the first blog post of 2022, because the last one was last year. Anyways, the topic of this blog post is April Fools Day; I began writing this blog post the next day (2 April) but I couldn't bother to finish writing this until today, but that's besides the point. This year, it was about a rename from Lynxmic to "Cimxnyl" (the same Lynxmic name, in reverse), with a very simple branding using the Arial font.
 
-![Logo of "Cimxnyl". The C and i letters in the logo also use the Arial font.](../../../public/img/blog/cimxnyl logo.png)
+![Logo of "Cimxnyl". The C and i letters in the logo also use the Arial font.](https://clyron.is-a.dev/img/blog/cimxnyl logo.png)
 
 Anyone who follows me/often checks out [my Twitter page][3] may have noticed what was with this whole Cimxnyl thingy in the most closest way. I referred to "Cimxnyl" as "a YouTube channel manufacturing batteries and tripods", referring to SocialBlade adjusting "estimated earnings" to show batteries and tripods instead of the actual estimated earnings it would usually show, again for this year's April Fools:
 

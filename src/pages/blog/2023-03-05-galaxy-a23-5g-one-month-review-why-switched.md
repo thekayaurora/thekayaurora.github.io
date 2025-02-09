@@ -21,7 +21,7 @@ After all this, I updated the phone to Android 13 as it had already rolled out b
 
 What about the camera? Generally nothing special, until you look at "More".
 
-![Top: A13 \`|`\ Bottom: A23 5G](../../../public/img/blog/a13 vs a23 camera.png)
+![Top: A13 \`|`\ Bottom: A23 5G](https://clyron.is-a.dev/img/blog/a13 vs a23 camera.png)
 
 From here, the A13 doesn't have slow-motion and night modes. The night mode does its job relatively good enough for a mid-range device. As for slow-motion, it does its job just as well. Should note that slow-motion only supports 720p (so if you're used to 1080p recording like me, then you either have to deal with it or idk), but both modes are a welcome addition regardless.
 

@@ -1,15 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const posts = Object.values(import.meta.glob("../pages/blog/*.md", { eager: true }));
+
+type BlogPost = {
+  frontmatter: {
+    title: string;
+    date: string;
+    desc: string;
+  };
+  url: string;
+  rawContent: string;
+};
+
+const posts = Object.values(import.meta.glob("../pages/blog/*.md", { eager: true })) as BlogPost[];
+
+posts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.date);
+  const dateB = new Date(b.frontmatter.date);
+  return dateB.getTime() - dateA.getTime();
+});
 ---
-<Layout
-   title="Clyron">
+
+<Layout title="Blog">
    <div class="text-3xl font-semibold m-1">Blog ✏️</div>
    <div class="text-base">
       <p>My space for long-form thoughts.</p>
    </div>
+   <div class="text-base">
+      <p><a href="/feed.xml">Also available over RSS!</a></p>
+   </div>
    <div class="grid md:grid-cols-2 md:p-4">
-    {posts.map((post: any) => 
+    {posts.map((post) => 
     <div class="box-border border-2 rounded-2xl p-4 m-4">
         <div class="text-2xl">{post.frontmatter.title}</div>
         <div class="text-lg">{post.frontmatter.date}</div>

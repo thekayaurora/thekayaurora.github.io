@@ -29,7 +29,7 @@ There are now several dedicated sections: an About section (where you can learn 
 
 You can see it for yourself right now [through this link][3]. Though I'd like to note that the About section is still incomplete, more will be added later on. You can notice some changes on this blog as well, though they aren't really notable enough, it's mostly backend.
 
-![](../../../public/img/blog/21.png)
+![](https://clyron.is-a.dev/img/blog/21.png)
 
 ## New content
 Lastly, just like I said in the previous post, expect some content to come in 2024. First off I'm hoping to finally fix the issue of lack of content on this blog (no guarantees though!) and finally come up with something to write about, anything that comes in my mind, anything that I'll be up to.

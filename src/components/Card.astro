@@ -2,17 +2,18 @@
 interface Props {
 	name: string;
 	icon: string;
+	icon_svg: string;
 	type: string;
 	desc: string;
 	btn_action: string;
 	btn_href: string;
 }
 
-const { name, icon, type, desc, btn_action, btn_href } = Astro.props;
+const { name, icon, icon_svg, type, desc, btn_action, btn_href } = Astro.props;
 ---
 <div class="box-border border-2 rounded-2xl p-4 m-4">
-	<div class="text-2xl"><i class={icon}></i> {name}</div>
+	<div class="text-2xl"><i class={icon}></i><img src=`../${icon_svg || undefined}.svg`></img> {name}</div>
 	<div class="text-lg">{type}</div>
 	<div class="text-base">{desc}</div>
 	<div class="text-base"><a class="button" href={btn_href}>{btn_action}</a></div>
-   </div>
+   </div> <!-- TODO: change icons from fontawesome to svg -->

@@ -20,7 +20,7 @@ Optane came enabled by default on my laptop but I didn't see any additional adva
 ## Installing Kubuntu & applications
 Now for the main point of this blog post, actually installing Linux. Prior to doing so I went to test it by running it through the USB flash drive with the Linux distro I was considering using. All went well, so I've gone to the main installation process, using all what I left unallocated from my D: drive. Fast forward, the installation finished in approx. 10 minutes (NVMe FTW).
 
-![](../../../public/img/blog/24.png)
+![](https://clyron.is-a.dev/img/blog/24.png)
 
 The next step was installing applications, such as my browser etc. To this point I didn't install every of my programs that I use on Windows and run on Linux, as I didn't get there yet (I have other things to do at this moment), I've only installed the programs I tend to use on more on a daily basis. However what I did install was some games I used/wanted to play on Linux for quite some time (Extreme Tux Racer, Quadrapassel, etc), the latter being a Tetris-like game (a looong time passed since I last played some Tetris, so why not) - good games to kill time ngl.
 
@@ -33,7 +33,7 @@ I am mostly speaking hardware wise, the good part is that most stuff work flawle
 
 The biggest issue I've had (and still have) was with Bluetooth, it's literally a hassle to work with. I have a pair of wireless earphones that I use on a daily basis, until recently I was able to pair them but as of now they simply just refuse to connect on Linux (they do still pair and connect just fine on Windows). It just seems my Linux system just has a particular problem with my wireless earphones since I was able to connect another pair (an older one I have) just fine.
 
-![](../../../public/img/blog/25.png)
+![](https://clyron.is-a.dev/img/blog/25.png)
 
 I was able to fix this in the short-term by loading an older version of the Linux kernel through the GRUB menu but that since auto-uninstalled. I have attempted to reinstall the said older version but then Linux wouldn't boot at all with the older version for some reason, I have zero clue as to why, if you ask me, no, I only have moderate Linux experience at most, not something really advanced, but not too basic either.
 

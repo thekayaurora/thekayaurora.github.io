@@ -22,7 +22,7 @@ But then, there comes the problems with Wayland. First inconvenience relates to 
 
 Another inconvenience (also another reason why I am sticking to X11) is that occasionally, Wayland Linux on my laptop wouldn't go with the shutdown process beyond these ACPI Errors for some reason (screen was dirty ik ik dont judge):
 
-![](../../../public/img/blog/28.jpg)
+![](https://clyron.is-a.dev/img/blog/28.jpg)
 
 Basically my laptop would be stuck here unless I forcibly turn off my laptop by holding down the power button. For me this is quite frightening, probably has to do with trauma back in 2019 with my previous main laptop's SSD idk *shrug*
 

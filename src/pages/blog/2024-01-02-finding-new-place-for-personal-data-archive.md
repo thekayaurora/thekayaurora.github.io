@@ -32,7 +32,7 @@ The laptop is new enough, and that's just my first rationale. Although it only h
 ## Preparing the HP laptop
 As soon as I got my hands on the HP 14s-fq0xxx, I've made a clean installation of Windows 11 (Home, because that's the edition the laptop came preinstalled with):
 
-![](../../../public/img/blog/hp.png){: style="max-width: 100%; height: auto;"}
+![](https://clyron.is-a.dev/img/blog/hp.png){: style="max-width: 100%; height: auto;"}
 
 As you could tell from the screenshot above, I've already installed several programs to this point, such as Ungoogled Chromium (my main browser), Speccy (open in the pic to show the PC specs), VLC & several others (yeah ik, such a clever choice to have Notepad++ as code editor, don't ask).
 
