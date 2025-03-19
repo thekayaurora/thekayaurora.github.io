@@ -7,61 +7,21 @@ const { frontmatter } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#d9826bs">
-    <meta property="og:color" content="#d9826bs">
+    <meta property="og:site_name" content="Clyron" />
     <meta property="og:image" content="https://clyron.is-a.dev/logo-sm.png">
+    <meta name="title" content={frontmatter.title} />
     <meta name="description" content={frontmatter.desc} />
     <link rel="icon" type="image/svg+xml" href="https://clyron.is-a.dev/logo-sm.png" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
-    <link rel="stylesheet" href="https://clyron.is-a.dev/src/components/style.css" type="text/css">
+    <link rel="stylesheet" href="../src/components/style.css" type="text/css">
 		<title>{frontmatter.title} ~ Clyron</title>
-	</head>
- <!-- fallback --> <style is:global>
-     @font-face {
-    font-family: "asap";
-    src: url("../components/fonts/asap.ttf");
+    <style is:global>
+      a {
+      text-decoration: underline;
       }
-    @keyframes gradient {
-0% {
-    background-position: 0% 50%;
-  }
-50% {
-    background-position: 100% 50%;
-   }
-100% {
-    background-position: 0% 50%;
-   }
-  }
-html, body {
-    background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(57, 51, 45, .5));
-
-    background-size: 400% 400%;
-    background-color: #2d3339;
-    color: #dce8f4;
-    font-family: "asap", sans-serif;
-    font-size: 1.1em
-    }
-a {
-    text-decoration: underline;
-    }
-a.button {
-      background-color: rgb(59, 69, 79);
-      color: #dce8f4;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border-radius: 15px 15px 15px 15px;
-      border: 15px 15px 15px 15px white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.2s;
-  }
-  a.button:hover, .navbtn:hover {
-    background-color: rgb(53, 61, 69);
-}
   </style>
+	</head>
 	<body>
         <div class="grid justify-center" id="logo">
             <div class="size-36 p-4"><img src="https://clyron.is-a.dev/logo.png"></div>
