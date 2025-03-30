@@ -1,0 +1,15 @@
+<script>
+    function redirectOldBrowsers() {
+     var isOldIE = navigator.userAgent.indexOf('MSIE') !== -1 && parseInt(navigator.userAgent.split('MSIE')[1]) < 9;
+     var isOldSafari = navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Version/5') !== -1;
+     var isNetscape = navigator.userAgent.indexOf('Netscape') !== -1 || navigator.userAgent.indexOf('Navigator') !== -1;
+   
+     var supportsHTML5 = !!document.createElement('canvas').getContext;
+   
+     if (isOldIE || isOldSafari || isNetscape || !supportsHTML5) {
+       window.location.href = "http://clyron.is-a.dev/legacy-site";
+     }
+   }
+   redirectOldBrowsers();
+</script>
+   

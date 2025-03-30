@@ -3,6 +3,7 @@ interface Props {
 	title: string;
 }
 const { title } = Astro.props;
+import OldBrowserCheck from '../components/LegacyBrowsers.astro';
 ---
 
 <!doctype html>
@@ -26,6 +27,7 @@ const { title } = Astro.props;
         </style>
 	</head>
 	<body>
+        <OldBrowserCheck></OldBrowserCheck>
         <div class="grid justify-center" id="logo">
             <div class="size-36 p-4"><img src="https://clyron.is-a.dev/logo.png"></div>
           </div>
