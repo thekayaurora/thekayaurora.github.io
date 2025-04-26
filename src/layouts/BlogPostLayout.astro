@@ -1,14 +1,16 @@
 ---
 const { frontmatter } = Astro.props;
 import OldBrowserCheck from '../components/LegacyBrowsers.astro';
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+    <ClientRouter />
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:site_name" content="Clyron" />
+    <meta property="og:site_name" content="Clyron's Website" />
     <meta property="og:image" content="../../img/logo-sm.png">
     <meta name="title" content={frontmatter.title} />
     <meta name="description" content={frontmatter.desc} />
@@ -17,30 +19,25 @@ import OldBrowserCheck from '../components/LegacyBrowsers.astro';
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
 		<title>{frontmatter.title} ~ Clyron</title>
-    <style is:global>
-      a {
-      text-decoration: underline;
-      }
-  </style>
 	</head>
-	<body>
-    <OldBrowserCheck></OldBrowserCheck>
-        <div class="grid justify-center" id="logo">
-            <div class="size-36 p-4"><img src="../..//img/logo.png"></div>
-          </div>
-          <div class="grid justify-center" id="toptext">
-         <div class="md:text-2xl italic">I am just a semi-average internet user~</div>
-         </div>
-         <div class="box-border border-2 rounded-3xl p-4 sm:ml-10 sm:mr-10 md:ml-15 md:mr-15 lg:ml-40 lg:mr-40 mt-4">
-          <div class="grid justify-center" id="navbar">
-             <div class="text-lg m-1"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
-          </div>
+	<body class="min-h-screeb">
+    <OldBrowserCheck />
+        <div class="flex justify-center items-center" id="navbar">
+            <div class="text-lg m-1 hidden md:inline"><a href="/">Home</a> ・ <a href="/projects">Projects</a></div>
+            <div class="size-28 p-4"><img src="../../img/logo.png"></div>
+            <div class="text-lg m-1 hidden md:inline"><a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
+        </div>
+        <div class="flex justify-center items-center" id="mobilenavbar">
+            <div class="text-lg m-1 pb-4 md:hidden"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
+        </div>
+         <div class="box-border border-2 rounded-3xl p-4 md:ml-15 md:mr-15 lg:ml-40 lg:mr-40">
+          <div><noscript><div class="text-base font-semibold italic m-1">⚠️ JavaScript is disabled, some website functionality may be limited</div></noscript></div>
           <div class="grid justify-items-center" id="blogpost">
-            <div class="text-3xl font-semibold">{frontmatter.title}</div>
-            <div class="text-base font-semibold">{frontmatter.date} ・ <i>{frontmatter.desc || 'No description available'}</i></div>
+            <div class="text-3xl font-bold">{frontmatter.title}</div>
+            <div class="text-base pb-4">{frontmatter.date} ・ <i class="font-light">{frontmatter.desc || 'No description available'}</i></div>
          </div>
          <div>
-           <div class="prose prose-invert prose-img:md:max-h-[750px] prose-img:md:max-w-[750px] max-w-[1000px] max-w-none pt-4 mx-auto text-left">
+           <div class="prose prose-img:md:max-h-[750px] prose-img:md:max-w-[750px] max-w-none leading-snug">
 	        	<slot />
            </div>
          </div>

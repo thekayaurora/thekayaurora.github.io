@@ -21,25 +21,25 @@ posts.sort((a, b) => {
 ---
 
 <Layout title="Blog">
-   <div class="text-3xl font-semibold m-1">Blog ✏️</div>
-   <div class="text-base">
-      <p>My space for long-form thoughts.</p>
+   <div class="flex">
+   <div class="text-3xl font-bold m-1 grow">Blog ✏️</div>
+   <a class="button text-2xl ml-2 basis-[narrow]" href="/feed.xml" title="RSS Feed"><i class="fas fa-rss"></i></a>
    </div>
    <div class="text-base">
-      <p><a href="/feed.xml">Also available over RSS!</a></p>
-   </div>
-   <div class="grid md:grid-cols-2 md:p-4">
+    <p>A space for me to ramble about various random things.</p>
+ </div>
+   <div class="grid md:p-4">
     {posts.map((post) => 
     <div class="box-border border-2 rounded-2xl p-4 m-4">
-        <div class="text-2xl">{post.frontmatter.title}</div>
+        <div class="text-2xl font-bold">{post.frontmatter.title}</div>
         <div class="text-lg">{post.frontmatter.date}</div>
-        <div class="text-base italic">{post.frontmatter.desc}</div>
+        <div class="text-base font-light italic">{post.frontmatter.desc}</div>
         <div class="text-base"><a class="button" href={post.url}>Read</a></div>
        </div>
     )}
     </div>
-    <div class="box-border border-2 rounded-2xl p-4 m-4">
-      <div class="text-2xl font-semibold">Looking for older blog posts?</div>
-      <div class="text-base"><a class="button" href="https://clyron.is-a.dev/lynxblog">Visit the legacy Lynxmic Blog!</a></div>
-     </div>
+    <div class="grid justify-items-center">
+      <a class="button" href="https://clyron.is-a.dev/lynxblog" class="text-2xl"><i class="fas fa-plus"></i> View older blog posts</a>
+      <div class="text italic text-sm pb-4">(redirects to the legacy Lynxmic Blog)</div>
+      </div>
 </Layout>

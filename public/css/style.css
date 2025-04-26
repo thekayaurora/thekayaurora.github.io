@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "asap";
-    src: url("fonts/asap.ttf");
+    font-family: "inter";
+    src: url("fonts/inter.ttf");
 }
 @keyframes gradient {
 0% {
@@ -14,19 +14,19 @@
    }
   }
 html, body {
-    background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(57, 51, 45, .5));
-    animation: gradient 7.5s ease-in infinite;
-    background-size: 400% 400%;
+    background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(100, 82, 83, .5), rgba(57, 51, 45, .5));
+    animation: gradient 20s ease-in-out infinite;
+    background-size: 500% 500%;
     background-color: #2d3339;
     color: #dce8f4;
-    font-family: "asap", sans-serif;
-    font-size: 1.1em
+    font-family: "inter", sans-serif;
+    font-size: 1.1em;
     }
 a {
-    text-decoration: underline;
+    text-decoration: underline !important;
     }
-a.button {
-      background-color: rgb(59, 69, 79);
+a.button, button.button {
+      background-color: rgb(111, 125, 138);
       color: #dce8f4;
       padding-top: 5px;
       padding-bottom: 5px;
@@ -34,10 +34,14 @@ a.button {
       padding-right: 10px;
       border-radius: 15px 15px 15px 15px;
       border: 15px 15px 15px 15px white;
-      font-weight: bold;
-      text-decoration: none;
+      text-decoration: none !important;
       transition: 0.2s;
   }
-  a.button:hover, .navbtn:hover {
-    background-color: rgb(53, 61, 69);
+a.button:hover, .navbtn:hover, button.button:hover {
+    background-color: rgb(75, 84, 92);
+}
+button.button:disabled {
+    background-color: rgb(111, 125, 138);
+    opacity: 0.5;
+    cursor: not-allowed;
 }

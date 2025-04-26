@@ -3,75 +3,63 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout
-   title="Clyron">
-   <div class="text-3xl font-semibold m-1">Socials 👥</div>
+<Layout title="Socials">
+   <div class="text-3xl font-bold m-1">Socials 👥</div>
    <div class="text-base">
-      <p>Where you can find me! (in activity order)</p>
+      <p>Where you can find me!</p>
       <br>
    </div>
-   <div class="text-2xl font-semibold m-1">High priority socials</div>
+   <div class="text-2xl font-bold m-1">High priority socials</div>
    <div class="text-base">The following socials are those that I do check most often.</div>
    <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
       <Card
-       name="Discord Server"
-       icon="fab fa-discord"
-       type="LynxPlaza"
-       desc="Community server for Lynxmic, primarily tech focused but accepting any topic!"
-       btn_href="https://discord.gg/wDxDKJU2sj"
-       btn_action="Join">
+        name="Discord Server"
+        icon="fab fa-discord"
+        type="LynxPlaza"
+        desc="Est. 2017, just yet another general hangout community"
+        btn_href="https://discord.gg/wDxDKJU2sj"
+        btn_action="Join"
+      rel="">
       </Card>
       <Card 
         name="Mastodon"
         icon="fab fa-mastodon"
         type="@clyron@wetdry.world"
-        desc="My primary social media! Go ahead and follow what am I up to"
+        desc="The Fediverse! Feel free to follow what am I up to!"
         btn_href="https://wetdry.world/@clyron"
-        btn_action="Visit">
+        btn_action="Visit"
+        rel="me">
       </Card>
       <Card 
         name="Bluesky"
         icon="fab fa-bluesky"
         type="@clyron.is-a.dev"
-        desc="I post pretty much as often as on Fedi, otherwise I don't check as frequently"
+        desc="Twitter but better. Main alternative to the Fediverse."
         btn_href="https://bsky.app/profile/clyron.is-a.dev"
-        btn_action="Visit">
+        btn_action="Visit"
+        rel="">
       </Card>
     </div>
-    <div class="text-2xl font-semibold m-1">Accounts elsewhere</div>
+    <div class="text-2xl font-bold m-1">Accounts elsewhere</div>
     <div class="text-base">My other public accounts, social media accounts or not</div>
        <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
        <Card 
-         name="GitHub"
-         icon="fab fa-github"
-         type="theclyron"
-         desc="Where all my open-source code projects are hosted at"
-         btn_href="https://github.com/theclyron"
-         btn_action="Visit">
-       </Card>
-       <Card 
-       name="Akkoma"
-       icon=""
-       type="@clyron@labyrinth.zone"
-       desc="My secondary/backup Fedi account (you can follow from Mastodon etc.)"
-       btn_href="https://labyrinth.zone/clyron"
-       btn_action="Visit">
+        name="GitHub"
+        icon="fab fa-github"
+        type="theclyron"
+        desc="Where all my open-source code projects are hosted at"
+        btn_href="https://github.com/theclyron"
+        btn_action="Visit"
+        rel="">
        </Card>
        <Card 
         name="YouTube"
         icon="fab fa-youtube"
         type="Clyron"
-        desc="My personal YT channel. Rarely uploading on this one, mostly focused on project channels"
+        desc="Yes, I make YouTube videos... sometimes"
         btn_href="https://youtube.com/@Clyron"
-        btn_action="Visit">
-      </Card>
-      <Card 
-        name="Geometry Dash"
-        icon=""
-        type="elclyron"
-        desc="Nowadays don't play much but feel free to check my profile still idk"
-        btn_href="https://gdbrowser.com/u/elclyron"
-        btn_action="Visit">
+        btn_action="Visit"
+        rel="">
       </Card>
       <Card 
         name="Internet Archive"
@@ -79,16 +67,36 @@ import Card from '../components/Card.astro';
         type="lynxmic"
         desc="I (rarely) do perservation work, but when I do it will be there"
         btn_href="https://archive.org/details/@lynxmic"
-        btn_action="Visit">
+        btn_action="Visit"
+        rel="">
+      </Card>
+      <Card 
+        name="Geometry Dash"
+        icon=""
+        type="elclyron"
+        desc="Nowadays don't play much but feel free to check my profile still idk"
+        btn_href="https://gdbrowser.com/u/elclyron"
+        btn_action="Visit"
+        rel="">
      </Card>
      <Card 
         name="Twitter"
         icon="fab fa-twitter"
-        type="@Lynxmic"
-        desc="No longer in use, but you can check out the Twitter Archive"
+        type="@Lynxmic (Archive)"
+        desc="Self-hosted archive, I stopped using Twitter (aside admittelly just lurking)"
         btn_href="https://tweets.clyron.is-a.dev"
-        btn_action="Visit archive">
-    </Card>
+        btn_action="Visit"
+        rel="">
+     </Card>
+     <Card 
+     name="DeviantArt"
+     icon="fab fa-deviantart"
+     type="clyron1"
+     desc="May or may not use in the future, currently only have bc of login walls"
+     btn_href="https://www.deviantart.com/clyron1"
+     btn_action="Visit"
+     rel="">
+  </Card>
       </div>
   </div>
 </Layout>
