@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+   <div class="text-3xl font-bold m-1">Changelog 🗒️</div>
+   <div class="text-base">
+      <p>Website version history and changelogs</p>
+      <br>
+      <div class="text-2xl font-bold m-1">2.4</div>
+      <div class="text-sm italic m-1">(25.05.2025)</div>
+      <ul class="list-disc pl-5">
+         <li>
+            Added the <b>Changelog</b> (<code>/cl</code>) page <small>(the page you're currently looking at!)</small>, tracking version history and changes.
+         </li>
+         <li>
+            The navbar is now an <b>Astro Component</b>, allowing for easier code maintenance. The JavaScript check has been moved inside the component as well.
+         </li>
+         <li>
+            Removed the <b>Retro Site</b> button from homepage. An eventual Retro Frontend will be built on top of clyronwebsite instead of a separate one, for easier maintenance
+         </li>
+         <li>
+            The <b>Visit Homepage</b> button has been removed from the 404 page. Unnecessary, as the navbar exists
+         </li>
+         <li>
+            Updated introduction in homepage. Now specifing just Minecraft as my (Clyron's) "all-time favorite game". Also removed the <a href="/cairo">Cairo</a> line, as the OC is no longer being used. The page continues to be available though.
+         </li>
+         <li>
+            Navbar items and webring names are now <b>bold</b>.
+         </li>
+         <li>
+            Readjusted order in the Socials page. Geometry Dash is now last.
+         </li>
+         <li>
+            Fixed a typo in a CSS class for the blog posts.
+         </li>
+      </ul>
+      <br>
+   </div>
+</Layout>

@@ -4,6 +4,7 @@ interface Props {
 }
 const { title } = Astro.props;
 import OldBrowserCheck from '../components/LegacyBrowsers.astro';
+import Navbar from '../components/Navbar.astro';
 import { ClientRouter } from 'astro:transitions';
 ---
 
@@ -25,16 +26,8 @@ import { ClientRouter } from 'astro:transitions';
 	</head>
 	<body class="min-h-screen">
         <OldBrowserCheck />
-        <div class="flex justify-center items-center" id="navbar">
-            <div class="text-lg m-1 hidden md:inline"><a href="/">Home</a> ・ <a href="/projects">Projects</a></div>
-            <div class="size-28 p-4"><img src="../../img/logo.png"></div>
-            <div class="text-lg m-1 hidden md:inline"><a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
-        </div>
-        <div class="flex justify-center items-center" id="mobilenavbar">
-            <div class="text-lg m-1 pb-4 md:hidden"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
-        </div>
+        <Navbar />
          <div class="box-border border-2 rounded-3xl p-4 md:ml-15 md:mr-15 lg:ml-40 lg:mr-40">
-          <div><noscript><div class="text-base font-semibold italic m-1">⚠️ JavaScript is disabled, some website functionality may be limited</div></noscript></div>
 		<slot title={title} />
 	</body>
 </html>
