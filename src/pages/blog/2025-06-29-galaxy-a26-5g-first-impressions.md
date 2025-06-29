@@ -7,7 +7,7 @@ tags: ["review", "phone", "samsung"]
 ---
 [Last time](/lynxblog/2023/03/05/galaxy-a23-5g-one-month-review-why-switched.html), I said I will keep my previous phone (my then-new Galaxy A23 5G) as my main for at least 1-2 years. I initially got it in late January 2023, and it's been frankly almost 2 years and 6 months since then!
 
-The initial plan later on was to keep this phone as my main for another 2 years before moving on to another phone, as I had thought that there was basically just barely any innovation 'n stuff nowadays or like just any reason whatsoever when it *was still working just fine*, and I thought I wasn't missing out on anything really.
+The initial plan later on was to keep this phone as my main for another 2 years before moving on to another phone, as I had thought that there was basically just barely any innovation 'n stuff nowadays or like just any reason whatsoever to upgrade my phone when it *was still working just fine*, and I thought I wasn't missing out on anything really.
 
 However, later on I realized that the phone was only entitled to **2 major Android version upgrades**, not 3 like I initially thought this whole time! The phone came out around the end of summer 2022, so out-of-the-box it only came with Android 12. This means that (for better or worse) it can only be officially upgraded to Android 14 with One UI 6.
 
