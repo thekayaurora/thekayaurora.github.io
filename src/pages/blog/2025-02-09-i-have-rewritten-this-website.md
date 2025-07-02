@@ -3,6 +3,7 @@ layout: "../../layouts/BlogPostLayout.astro"
 title: "I have rewritten this website"
 desc: "Goodbye to Jekyll, hello to Astro!"
 date: 9 February 2025
+tags: ["meta", "update"]
 ---
 After like over 3 months of off-and-on development (since I procrastinated a lot), I'm finally here announcing a new iteration of clyron.is-a.dev.
 

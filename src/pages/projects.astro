@@ -6,14 +6,17 @@ import Card from '../components/Card.astro';
 <Layout title="Projects">
    <div class="text-3xl font-bold m-1">Projects 💻</div>
    <div class="text-base">
-      <p>Notable present and past projects I have worked on. Not too many but I wanna get on more someday</p>
+      <p>Things I work(ed) on! Not too many but I wanna get on more someday</p>
+      <br>
    </div>
+   <div class="text-2xl font-bold m-1">Active projects</div>
+   <div class="text-base">The following projects are currently maintained by me at least in some capacity.</div>
    <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
       <Card 
         name="Lynxmic"
         icon="fab fa-youtube"
         type="Channel"
-        desc="Tech-oriented YouTube channel with over 1K+ subs. Uploads whenever I feel like it"
+        desc="Tech-oriented YouTube channel with 1,5K+ subs. Uploads whenever I feel like it"
         btn_href="https://youtube.com/lynxmic"
         btn_action="Visit"
         rel="">
@@ -27,6 +30,10 @@ import Card from '../components/Card.astro';
         btn_action="Source code"
         rel="">
      </Card>
+     </div>
+     <div class="text-2xl font-bold m-1">Past projects</div>
+     <div class="text-base">Projects I used to work on but since basically moved on from.</div>
+     <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
      <Card 
        name="Venus"
        icon="fab fa-discord"
@@ -37,5 +44,4 @@ import Card from '../components/Card.astro';
        rel="">
      </Card>
    </div>
-  </div>
 </Layout>

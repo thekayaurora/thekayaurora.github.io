@@ -1,6 +1,9 @@
+---
+import { d } from "../config";
+---
 <div class="flex justify-center items-center" id="navbar">
     <div class="text-lg font-semibold m-1 hidden md:inline"><a href="/">Home</a> ・ <a href="/projects">Projects</a></div>
-    <div class="size-28 p-4"><img src="../../img/logo.png"></div>
+    <div class="size-28 p-4"><img src={d.logo}></div>
     <div class="text-lg font-semibold m-1 hidden md:inline"><a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
 </div>
 <div class="flex justify-center items-center" id="mobilenavbar">

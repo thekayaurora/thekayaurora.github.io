@@ -1,0 +1,61 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+type BlogPost = {
+  frontmatter: {
+    title: string;
+    date: string;
+    desc: string;
+    tags: string[];
+  };
+  url: string;
+};
+
+export async function getStaticPaths() {
+  const posts = Object.values(import.meta.glob("../../blog/*.md", { eager: true })) as BlogPost[];
+
+  const tags = new Set<string>();
+  posts.forEach((post) => {
+    post.frontmatter.tags?.forEach((tag) => tags.add(tag));
+  });
+
+  return Array.from(tags).map((tag) => ({
+    params: { tag },
+  }));
+}
+
+const posts = Object.values(import.meta.glob("../../blog/*.md", { eager: true })) as BlogPost[];
+
+const { tag } = Astro.params;
+
+const taggedPosts = posts.filter((post) =>
+  post.frontmatter.tags?.includes(tag)
+);
+
+taggedPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime()
+);
+---
+
+<Layout title="Blog">
+   <div class="flex">
+   <div class="text-3xl font-bold m-1 grow">Blog ✏️</div>
+   <a class="button text-2xl ml-2 basis-[narrow]" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss"></i></a>
+   <a class="button text-2xl ml-2 basis-[narrow]" href="../lynxblog" title="Lynxmic Blog (for older blog posts)"><i class="fas fa-box-archive"></i></a>
+   </div>
+   <div class="text-base">
+    <p>Posts tagged with <code>{tag}</code></p>
+ </div>
+   <div class="grid md:p-4">
+    {taggedPosts.map((post) => 
+    <div class="box-border border-2 rounded-2xl p-4 m-4">
+        <div class="text-2xl font-bold">{post.frontmatter.title}</div>
+        <div class="text-base italic">{post.frontmatter.desc}</div>
+        <div class="text-sm">🗓️ {post.frontmatter.date} ・ {post.frontmatter.tags && (<ul class="tags inline-flex gap-2">{post.frontmatter.tags.map(tag => (<li class="text-sm"><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+        <div class="text-base"><a class="button" href={post.url}>Read</a></div>
+       </div>
+    )}
+    </div>
+</Layout>

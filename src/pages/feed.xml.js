@@ -1,9 +1,26 @@
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
+import { d } from "../config";
 
 const parser = new MarkdownIt();
 const site = import.meta.env.SITE;
+
+function makeImageSrcAbsolute(html, siteOrigin) {
+  return html.replace(/<img\s+[^>]*src="([^"]+)"[^>]*>/g, (match, src) => {
+    if (src.startsWith('http') || src.startsWith('//')) {
+      return match;
+    }
+
+    const cleanedSrc = src.replace(/(\.\.\/)+public\//, '');
+
+    const path = cleanedSrc.startsWith('/') ? cleanedSrc : '/' + cleanedSrc;
+
+    const absoluteSrc = new URL(path, siteOrigin).href;
+
+    return match.replace(src, absoluteSrc);
+  });
+}
 
 export async function GET() {
   const posts = import.meta.glob('../pages/blog/*.md', { eager: true });
@@ -35,19 +52,21 @@ export async function GET() {
       },
     });
 
+    const contentWithAbsoluteImages = makeImageSrcAbsolute(sanitizedContent, site);
+
     return {
       title,
       pubDate: date,
       description: desc || 'No description available',
       link: `${site}${url}`,
-      author: 'Clyron',
-      content: sanitizedContent,
+      author: `${d.name}`,
+      content: contentWithAbsoluteImages,
     };
   }).filter(Boolean);
 
   return rss({
-    title: "Clyron's Blog",
-    description: "Clyron's space for long-form thoughts",
+    title: `${d.name}'s Blog`,
+    description: `${d.name}'s space to ramble about various things`,
     site,
     items,
   });

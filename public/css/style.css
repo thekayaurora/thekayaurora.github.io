@@ -13,31 +13,62 @@
     background-position: 0% 50%;
    }
   }
-html, body {
+@keyframes slide {
+  100% { left: 0; }
+}
+@keyframes effect {
+  from {top: -25px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+    }
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+    }
+* {
+    font-family: "inter", sans-serif;
+}
+html {
     background: linear-gradient(-50deg, rgba(45, 51, 57, .5), rgba(100, 82, 83, .5), rgba(57, 51, 45, .5));
     animation: gradient 20s ease-in-out infinite;
     background-size: 500% 500%;
-    background-color: #2d3339;
-    color: #dce8f4;
-    font-family: "inter", sans-serif;
+    background-color: rgb(45, 51, 57);
+    color: rgb(220, 232, 244);
     font-size: 1.1em;
     }
 a {
     text-decoration: underline !important;
     }
+#box {
+    animation: effect 0.3s ease-in-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: both;
+}
+@-moz-document url-prefix() {
+  html, body, #box {
+    animation: none;
+    }
+}
 a.button, button.button {
       background-color: rgb(111, 125, 138);
-      color: #dce8f4;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
+      color: rgb(220, 232, 244);
+      padding-block: 5px;
+      padding-inline: 10px;
       border-radius: 15px 15px 15px 15px;
       border: 15px 15px 15px 15px white;
       text-decoration: none !important;
       transition: 0.2s;
   }
-a.button:hover, .navbtn:hover, button.button:hover {
+.tag {
+    background-color: rgb(111, 125, 138);
+    color: rgb(220, 232, 244);
+    padding-block: 1px;
+    padding-inline: 3px;
+    border-radius: 5px 5px 5px 5px;
+    border: 5px 5px 5px 5px white;
+    text-decoration: none !important;
+    transition: 0.2s;
+}
+a.button:hover, .navbtn:hover, .tag:hover, button.button:hover {
     background-color: rgb(75, 84, 92);
 }
 button.button:disabled {

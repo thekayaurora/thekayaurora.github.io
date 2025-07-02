@@ -1,0 +1,20 @@
+---
+import { d } from "../config";
+import pkg from '../../package.json';
+export const name = pkg.name;
+export const version = pkg.version;
+---
+
+<div class="grid justify-items-center m-4" id="footer">
+    <div class="text-base"><b>© {d.copyrightyear} {d.name}</b></div>
+    <br>
+    <div class="text-base">
+       <b><a href=`http://github.com/${d.sourcecode}`>{name}</a>&nbsp;{version}</b> - <a href=`/cl`>view changelog</a>
+    </div>
+    <div class="text-base">
+       Source code of this website is licensed under <a href="https://opensource.org/license/mit">MIT</a>
+    </div>
+    <div class="text-base">
+       Blog posts are licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+    </div>
+    </div>

@@ -1,17 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 
 type BlogPost = {
   frontmatter: {
     title: string;
     date: string;
     desc: string;
+    tags: string[];
   };
   url: string;
   rawContent: string;
 };
 
-const posts = Object.values(import.meta.glob("../pages/blog/*.md", { eager: true })) as BlogPost[];
+const posts = Object.values(import.meta.glob("../../pages/blog/*.md", { eager: true })) as BlogPost[];
 
 posts.sort((a, b) => {
   const dateA = new Date(a.frontmatter.date);
@@ -23,7 +24,8 @@ posts.sort((a, b) => {
 <Layout title="Blog">
    <div class="flex">
    <div class="text-3xl font-bold m-1 grow">Blog ✏️</div>
-   <a class="button text-2xl ml-2 basis-[narrow]" href="/feed.xml" title="RSS Feed"><i class="fas fa-rss"></i></a>
+   <a class="button text-2xl ml-2 basis-[narrow]" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss"></i></a>
+   <a class="button text-2xl ml-2 basis-[narrow]" href="../lynxblog" title="Lynxmic Blog (for older blog posts)"><i class="fas fa-box-archive"></i></a>
    </div>
    <div class="text-base">
     <p>A space for me to ramble about various random things.</p>
@@ -32,14 +34,10 @@ posts.sort((a, b) => {
     {posts.map((post) => 
     <div class="box-border border-2 rounded-2xl p-4 m-4">
         <div class="text-2xl font-bold">{post.frontmatter.title}</div>
-        <div class="text-lg">{post.frontmatter.date}</div>
-        <div class="text-base font-light italic">{post.frontmatter.desc}</div>
+        <div class="text-base italic">{post.frontmatter.desc}</div>
+        <div class="text-sm">🗓️ {post.frontmatter.date} ・ {post.frontmatter.tags && (<ul class="tags inline-flex gap-2">{post.frontmatter.tags.map(tag => (<li class="text-sm"><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
         <div class="text-base"><a class="button" href={post.url}>Read</a></div>
        </div>
     )}
     </div>
-    <div class="grid justify-items-center">
-      <a class="button" href="https://clyron.is-a.dev/lynxblog"><i class="fas fa-plus"></i> View older blog posts</a>
-      <div class="text italic text-sm pb-4">(redirects to the legacy Lynxmic Blog)</div>
-      </div>
 </Layout>

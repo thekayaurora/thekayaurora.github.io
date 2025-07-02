@@ -3,6 +3,7 @@ layout: "../../layouts/BlogPostLayout.astro"
 title: "Lenovo IdeaPad 1 15ALC7 6-month review"
 desc: "Doesn't disappoint"
 date: 15 February 2025
+tags: ["review", "lenovo", "laptop", "pc"]
 ---
 Almost 6 months ago I somehow got in the hands of this laptop that replaced my previous main PC, a "Lenovo IdeaPad 3 15ITL6" from 2021
 
