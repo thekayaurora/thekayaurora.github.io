@@ -1,14 +1,41 @@
 ---
 import { d } from "../config";
 ---
-<div class="flex justify-center items-center" id="navbar">
-    <div class="text-lg font-semibold m-1 hidden md:inline"><a href="/">Home</a> ・ <a href="/projects">Projects</a></div>
-    <div class="size-28 p-4"><img src={d.logo}></div>
-    <div class="text-lg font-semibold m-1 hidden md:inline"><a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
+<div class="navbar">
+    <div id="contents"><img id="logo" src={d.logo}></div>
+    <div id="contents"><a id="link" href="/">Home</a> ・ <a id="link" href="/projects">Projects</a> ・ <a id="link" href="/socials">Socials</a> ・ <a id="link" href="/blog">Blog</a>
+    </div>
 </div>
-<div class="flex justify-center items-center" id="mobilenavbar">
-    <div class="text-lg font-semibold m-1 pb-4 md:hidden"><a href="/">Home</a> ・ <a href="/projects">Projects</a> ・ <a href="/socials">Socials</a> ・ <a href="/blog">Blog</a></div>
+<div class="stars">
+<div class="star star1"></div>
+<div class="star star2"></div>
+<div class="star star3"></div>
+<div class="star star4"></div>
+<div class="star star5"></div>
 </div>
-<div class="flex justify-center items-center">
-    <noscript><div class="text-base font-semibold italic pb-4">⚠️ JavaScript is disabled, some website functionality may be limited ⚠️</div></noscript>
-</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const starsContainer = document.querySelector('.stars');
+    if (!(starsContainer instanceof HTMLElement)) return;
+    const numStars = 5;
+    for (let i = 1; i <= numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star', `star${i}`);
+        starsContainer.appendChild(star);
+    }
+    requestAnimationFrame(() => {
+        starsContainer.style.opacity = '0.1';
+    });
+    document.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const fadeEnd = 150;
+
+        if (scrollY >= fadeEnd) {
+            starsContainer.style.opacity = '0';
+        } else {
+            const opacity = 0.1 * (1 - scrollY / fadeEnd);
+            starsContainer.style.opacity = opacity.toFixed(3);
+        }
+    });
+});
+</script>

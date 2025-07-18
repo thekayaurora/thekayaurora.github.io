@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/Blog.astro"
 title: "Lenovo IdeaPad 1 15ALC7 6-month review"
 desc: "Doesn't disappoint"
 date: 15 February 2025

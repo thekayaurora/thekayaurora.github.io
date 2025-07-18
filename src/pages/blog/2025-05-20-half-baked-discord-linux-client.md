@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/Blog.astro"
 title: "The half-baked Discord Linux client"
 desc: "Discord doesn't really care that much"
 date: 20 May 2025

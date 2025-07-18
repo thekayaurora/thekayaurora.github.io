@@ -1,0 +1,38 @@
+<div>
+<div id="section" style="padding-top:16px; padding-bottom:16px;">⭐ Buttons!</div>
+<div>
+      <a href="/discord"><img src="/img/8831/axeon2.png" title="Axeon Network" id="eighteightthreeone"></a>
+      <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World" id="eighteightthreeone"></a>
+      <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux" id="eighteightthreeone">
+      <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux" id="eighteightthreeone"></a>
+      <a href="https://code.visualstudio.com/"><img src="/img/8831/vscode.gif" title="Visual Studio Code" id="eighteightthreeone"></a>
+      <a href="https://krita.org"><img src="/img/8831/krita.png" title="Krita" id="eighteightthreeone"></a>
+      <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now" id="eighteightthreeone">
+      <img src="/img/8831/ieexplode.gif" title="Internet Exploder" id="eighteightthreeone">
+      <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3" id="eighteightthreeone">
+      </div>
+      <div>
+         <div style="padding-top:10px; padding-bottom:10px;"><b>My buttons!</b></div>
+         <img src="/img/8831/kay.png" id="eighteightthreeone" class="mybutton" data-copy='&lt;a href="http://clyron.is-a.dev"&gt;&lt;img src="http://clyron.is-a.dev/img/8831/kay.png"&gt;' style="cursor:pointer;">
+         <img src="/img/8831/kaynight.png" id="eighteightthreeone" class="mybutton" data-copy='&lt;a href="http://clyron.is-a.dev"&gt;&lt;img src="http://clyron.is-a.dev/img/8831/kaynight.png"&gt;' style="cursor:pointer;">
+         <div id="clicktocopy"><i>Click on one of the buttons to copy and paste the HTML code!</i></div>
+         </div>
+        </div>
+        <script>
+   const status = document.getElementById('clicktocopy');
+
+   document.querySelectorAll('.mybutton').forEach(btn => {
+     const element = btn as HTMLElement;
+     element.addEventListener('click', () => {
+         const text = element.dataset.copy;
+
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        status.innerHTML = '<b>✅ Copied!</b>';
+        setTimeout(() => {
+          status.innerHTML = '<i>Click on one of the buttons to copy and paste the HTML code!</i>';
+        }, 1000);
+      });
+  });
+});
+</script>

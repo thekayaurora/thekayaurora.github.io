@@ -1,47 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Site.astro';
 ---
 
 <Layout title="Projects">
-   <div class="text-3xl font-bold m-1">Projects 💻</div>
-   <div class="text-base">
-      <p>Things I work(ed) on! Not too many but I wanna get on more someday</p>
-      <br>
+   <div class="head">
+      <div id="title">💻 Projects!</div>
+      <div>What I do!</div>
    </div>
-   <div class="text-2xl font-bold m-1">Active projects</div>
-   <div class="text-base">The following projects are currently maintained by me at least in some capacity.</div>
-   <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
-      <Card 
-        name="Lynxmic"
-        icon="fab fa-youtube"
-        type="Channel"
-        desc="Tech-oriented YouTube channel with 1,5K+ subs. Uploads whenever I feel like it"
-        btn_href="https://youtube.com/lynxmic"
-        btn_action="Visit"
-        rel="">
-      </Card>
-      <Card 
-        name="clyron.is-a.dev"
-        icon="fas fa-globe"
-        type="Website"
-        desc="The website you're on right now! Proudly made with Astro and Tailwind CSS ^_^"
-        btn_href="https://github.com/theclyron/theclyron.github.io"
-        btn_action="Source code"
-        rel="">
-     </Card>
-     </div>
-     <div class="text-2xl font-bold m-1">Past projects</div>
-     <div class="text-base">Projects I used to work on but since basically moved on from.</div>
-     <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
-     <Card 
-       name="Venus"
-       icon="fab fa-discord"
-       type="Discord Bot"
-       desc="Multi-purpose Discord bot with some ambition. Started in 2018, discontinued 2019"
-       btn_href="https://github.com/theclyron/Venus"
-       btn_action="Source code"
-       rel="">
-     </Card>
-   </div>
+   <ul class="list">
+   <li><b>Lynxmic</b>, an tech-oriented YouTube channel with 1,5k+ subscribers. <a href="http://youtube.com/lynxmic">Visit&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   <li><b>Axeon Network</b>, a series of community-oriented projects. Includes the <a href="/discord">Discord server&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a>, the <a href="https://rvlt.gg/JaMp6gXf">Revolt server&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a>, and the MidoriMC Minecraft (Java) Server.</li>
+   <li><b>This website</b>, gateway to my internet presence, made with Astro. <a href="https://github.com/thekayaurora/thekayaurora.github.io">See source code&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   <li><b>Venus</b>, a multi-purpose Discord Bot, made with Discord.js. Discontinued as of 2019. <a href="https://github.com/thekayaurora/Venus">See source code&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   </ul>
 </Layout>

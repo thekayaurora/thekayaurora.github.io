@@ -1,0 +1,38 @@
+---
+const { frontmatter } = Astro.props;
+import { d } from "../config";
+/* import { ClientRouter } from 'astro:transitions'; */
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+    <!-- <ClientRouter /> --> <!-- Smooth transitions between pages will rebecome available in v3.1. -->
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:site_name" content=`${d.shortname}'s website` />
+    <meta property="og:image" content={d.logo}>
+    <meta name="title" content={frontmatter.title} />
+    <meta name="description" content={frontmatter.desc} />
+    <link rel="icon" type="image/svg+xml" href={d.favicon} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css">
+		<title>{frontmatter.title} ~ {d.name}</title>
+	</head>
+	<body>
+    <Navbar />
+         <div class="content blogpost">
+          <div id="title">{frontmatter.title}</div>
+            <div><i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
+            <div>🗓️ {frontmatter.date} ・ {frontmatter.tags && (<ul id="tagarray">{frontmatter.tags.map(tag => (<li><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+          <br>
+           <div>
+	        	<slot />
+           </div>
+         </div>
+         <Footer />
+	</body>
+</html>

@@ -1,15 +1,63 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Site.astro';
 ---
 
 <Layout title="Changelog">
-   <div class="text-3xl font-bold m-1">Changelog 🗒️</div>
-   <div class="text-base">
-      <p>Website version history and changelogs</p>
+   <div class="head">
+      <div id="title">🗒️ Changelog!</div>
+      <div>Website version history and changelogs</div>
+   </div>
+   <div>
+      <div id="section">3.0</div>
+      <small style="margin:1;"><i>(18.07.2025)</i></small>
+      <ul id="list">
+         <li>
+            <i>Starting from this version, this website will be referred to as kaywebsite, rather than clyronwebsite.</i>
+         </li>
+         <li>
+            <b>Completely ditched Tailwind CSS</b>, thus regaining full control over the CSS looking forward <b>to eventual ancient browser support</b>. Support is currently guaranteed as low as IE11.
+         </li>
+         <li>
+            <b>The website has received a visual overhaul!</b> This incorporates the design of the current branding while making it more aesthetically pleasing, also adding various animations.
+         </li>
+         <li>
+            The Cairo (<code>/cairo</code>) page has been <b>removed</b>, to reduce maintenance burden. The OC had no longer been used with no plans to bring it back.
+         </li>
+         <li>
+            <b><a href="/">Home</a></b>: 88x31 buttons have been moved into their own Astro Component. Also, clicking on the Kay 88x31 buttons now automatically <b>copies their corresponding HTML codes to the clipboard!</b>
+         </li>
+         <li>
+            <b><a href="/">Home</a></b>: Introduction/biography has been rewritten to be more brief.
+         </li>
+         <li>
+            <b><a href="/blog">Blog</a></b>: The Lynxmic Blog button has been removed. It will however continue to be accessible at <code>/lynxblog</code>
+         </li>
+         <li>
+            <b><a href="/blog">Blog</a></b>: Tags now have a fallback display for ancient browsers
+         </li>
+         <li>
+            The Cards component has been removed. The <a href="/projects">Projects</a> and <a href="/socials">Socials</a> pages have been <b>rewritten in list view</b>.
+         </li>
+         <li>
+            The LegacyBrowsers component has been removed. This was supposed to <b>redirect ancient browsers to ClyronWebsite v1.x</b>.
+         </li>
+         <li>
+            Added support for <b>favicon</b> as a separate adjustable variable from the logo in <code>config.ts</code>.
+         </li>
+         <li>
+            <i>Layout.astro</i> and <i>BlogPostLayout.astro</i> have been renamed <i>Site.astro</i> and <i>Blog.astro</i> respectively.
+         </li>
+         <li>
+            <b>Moved noscript warning</b> from the navbar to the footer.
+         </li>
+         <li>
+            General code cleanup & bumped dependencies.
+         </li>
+      </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.5.2</div>
-      <div class="text-sm italic m-1">(08.07.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.5.2</div>
+      <small style="margin:1;"><i>(08.07.2025)</i></small>
+      <ul id="list">
          <li>
             Changed all Clyron references to <b>KayAurora</b>. Clyron is now being referred to as a previous alias, but the website <b>remains at clyron.is-a.dev for now.</b>
          </li>
@@ -24,9 +72,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.5.1</div>
-      <div class="text-sm italic m-1">(04.07.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.5.1</div>
+      <small style="margin:1;"><i>(04.07.2025)</i></small>
+      <ul id="list">
          <li>
             <b><a href="/cairo">Cairo page</a></b>: Updated Reference Sheet to include a drawing of Cairo <b>with glasses on</b>.
          </li>
@@ -47,9 +95,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.5</div>
-      <div class="text-sm italic m-1">(03.07.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.5</div>
+      <small style="margin:1;"><i>(03.07.2025)</i></small>
+      <ul id="list">
          <li>
             <b>Tags have been implemented</b> in the blog! All blog posts have been retroactively applied tags.
          </li>
@@ -109,9 +157,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.4.2</div>
-      <div class="text-sm italic m-1">(05.06.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.4.2</div>
+      <small style="margin:1;"><i>(05.06.2025)</i></small>
+      <ul id="list">
          <li>
             Changed the Clyron logo from the ring previously used to the newly-introduced glowing star logo.
          </li>
@@ -120,9 +168,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.4.1</div>
-      <div class="text-sm italic m-1">(02.06.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.4.1</div>
+      <small style="margin:1;"><i>(02.06.2025)</i></small>
+      <ul id="list">
          <li>
             Updated an outdated link in the <a href="/projects"><b>Projects</b></a> page.
          </li>
@@ -131,9 +179,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.4</div>
-      <div class="text-sm italic m-1">(25.05.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.4</div>
+      <small style="margin:1;"><i>(25.05.2025)</i></small>
+      <ul id="list">
          <li>
             Added the <b>Changelog</b> (<code>/cl</code>) page <small>(the page you're currently looking at!)</small>, tracking version history and changes.
          </li>
@@ -160,9 +208,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.3.1</div>
-      <div class="text-sm italic m-1">(30.04.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.3.1</div>
+      <small style="margin:1;"><i>(30.04.2025)</i></small>
+      <ul id="list">
          <li>
             <b><a href="/socials">Socials</a></b>: Mentions of <b>LynxPlaza</b> have been changed to <b>Axeon Network</b>, the new name of the Discord server.
          </li>
@@ -174,9 +222,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.3</div>
-      <div class="text-sm italic m-1">(26.04.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.3</div>
+      <small style="margin:1;"><i>(26.04.2025)</i></small>
+      <ul id="list">
          <li>
             <b>Redesigned the navigation bar</b>. Removed the <i>I am just a semi-average internet user~</i> line and moved links outside the box.
          </li>
@@ -224,9 +272,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.2.1</div>
-      <div class="text-sm italic m-1">(31.03.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.2.1</div>
+      <small style="margin:1;"><i>(31.03.2025)</i></small>
+      <ul id="list">
          <li>
             <b><a href="/cairo">Cairo page</a></b>: Updated Cairo profile picture and optimized page for mobile.
          </li>
@@ -238,9 +286,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.2</div>
-      <div class="text-sm italic m-1">(30.03.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.2</div>
+      <small style="margin:1;"><i>(30.03.2025)</i></small>
+      <ul id="list">
          <li>
             <b><a href="/cairo">Cairo page</a></b>: Renamed from <b>Kairo to Cairo</b>, updated the body drawing to remove glasses, added profile picture and other additional basic info and lore.
          </li>
@@ -258,9 +306,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.1</div>
-      <div class="text-sm italic m-1">(19.03.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.1</div>
+      <small style="margin:1;"><i>(19.03.2025)</i></small>
+      <ul id="list">
          <li>
             Added a new page for <b>the new Clyron OC</b>, called <b><a href="/cairo">Kairo</a></b>, and updated introduction in <a href="/">homepage</a> to mention it.
          </li>
@@ -281,9 +329,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0.1</div>
-      <div class="text-sm italic m-1">(03.03.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0.1</div>
+      <small style="margin:1;"><i>(03.03.2025)</i></small>
+      <ul id="list">
          <li>
             Updated <b>the Clyron 88x31 button</b> and added a Lynxmic 88x31 button in the website's files.
          </li>
@@ -292,9 +340,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0</div>
-      <div class="text-sm italic m-1">(09.02.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0</div>
+      <small style="margin:1;"><i>(09.02.2025)</i></small>
+      <ul id="list">
          <li>
             <b>Initial non-beta release!</b> This is reflected by links having been changed to remove mentions of <code>website-exp</code>. The website also fully replaces v1 as the default.
          </li>
@@ -309,9 +357,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta080225</div>
-      <div class="text-sm italic m-1">(08.02.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta080225</div>
+      <small style="margin:1;"><i>(08.02.2025)</i></small>
+      <ul id="list">
          <li>
             Improvements to readability of blog posts.
          </li>
@@ -320,9 +368,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta070225</div>
-      <div class="text-sm italic m-1">(07.02.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta070225</div>
+      <small style="margin:1;"><i>(07.02.2025)</i></small>
+      <ul id="list">
          <li>
             <b><a href="/">Home</a></b>: Added a quick introduction/biography.
          </li>
@@ -337,9 +385,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta030225</div>
-      <div class="text-sm italic m-1">(03.02.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta030225</div>
+      <small style="margin:1;"><i>(03.02.2025)</i></small>
+      <ul id="list">
          <li>
             <i>This version changes the numbering scheme of public betas to include date in the DDMMYY format instead of whatever beta this is.</i>
          </li>
@@ -357,9 +405,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta4</div>
-      <div class="text-sm italic m-1">(18.01.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta4</div>
+      <small style="margin:1;"><i>(18.01.2025)</i></small>
+      <ul id="list">
          <li>
             Added an <b>initial implementation of the <a href="/blog">blog</a>!</b> Posts from the v1 website have been ported there.
          </li>
@@ -371,9 +419,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta3</div>
-      <div class="text-sm italic m-1">(15.01.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta3</div>
+      <small style="margin:1;"><i>(15.01.2025)</i></small>
+      <ul id="list">
          <li>
             Proper <b>optimization for small form factors!</b> (e.g. phone and tablet screens)
          </li>
@@ -385,9 +433,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta2</div>
-      <div class="text-sm italic m-1">(15.01.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta2</div>
+      <small style="margin:1;"><i>(15.01.2025)</i></small>
+      <ul id="list">
          <li>
             The background has been changed <b>to an animated gradient</b>, and the font size has been adjusted to be larger.
          </li>
@@ -408,9 +456,9 @@ import Layout from '../layouts/Layout.astro';
          </li>
       </ul>
       <br>
-      <div class="text-2xl font-bold m-1">2.0-beta1</div>
-      <div class="text-sm italic m-1">(11.01.2025)</div>
-      <ul class="list-disc pl-5">
+      <div id="section">2.0-beta1</div>
+      <small style="margin:1;"><i>(11.01.2025)</i></small>
+      <ul id="list">
          <li>
             <i>Initial public beta release! This changelog includes differences from the final v1 release.</i>
          </li>

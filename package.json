@@ -1,7 +1,7 @@
 {
-  "name": "clyronwebsite",
+  "name": "kaywebsite",
   "type": "module",
-  "version": "2.5.2",
+  "version": "3.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,14 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/tailwind": "^5.1.4",
     "astro": "^5.1.7",
     "markdown-it": "^14.1.0",
-    "sanitize-html": "^2.14.0",
-    "tailwindcss": "^3.4.15"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.16"
+    "sanitize-html": "^2.14.0"
   }
 }

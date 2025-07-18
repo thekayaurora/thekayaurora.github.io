@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/Blog.astro"
 title: "I have rewritten this website"
 desc: "Goodbye to Jekyll, hello to Astro!"
 date: 9 February 2025

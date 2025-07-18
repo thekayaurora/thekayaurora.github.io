@@ -1,73 +1,33 @@
 ---
 import { d } from "../config";
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Site.astro';
+import Buttons from '../components/Buttons.astro';
 ---
 
 <Layout title="Home">
-   <div class="text-3xl font-bold m-1">Hi there! 👋</div>
-   <div class="text-base">
-      <p>You landed on <b>{d.name}</b>'s personal website!</p>
-      <br>
-      <div class="text-base">Some things to know about me:
-         <ul class="list-disc pl-5">
-            <li>
-               I am a tech (primarily software) nerd. In the "outside world" I have an admiration for various natural sights and travelling in general
-            </li>
-            <li>
-               I am probably best known for running <a href="https://youtube.com/lynxmic"><b>Lynxmic</b></a>, a tech-focused YouTube channel with over 1,500+ subscribers
-            </li>
-            <li>
-               I run a community network known as the <a href="https://discord.gg/wDxDKJU2sj"><b>Axeon Network</b></a>. The Discord server has been going for over 7 years and grown to almost 100 members
-            </li>
-            <li>
-               I sometimes also work on other personal projects primarily for fun, though most of the time they don't really go beyond planning (lol)
-            </li>
-            <li>
-               I play games (yes) to kill time, <b>Minecraft</b> being one of my all-time favorites
-            </li>
-            <li>
-               I have gone via different internet aliases in the past, there's a chance you may recognize the names <b>Lynxmic</b> or <b>solarixtech</b>
-            </li>
-            <li>
-               My timezone is <b>GMT+2</b>, coming from <b>Europe</b>
-            </li>
-         </ul>
-         <br>
+   <div class="head">
+      <div id="title">👋 Hi there!~</div>
+      <div>You landed on <b>{d.name}</b>'s personal website!</div>
+   </div>
+      <div>Who I am:
+        <ul class="list nobullet">
+        <li>💻 <b>I am a tech (mainly software) nerd</b> and enjoy tinkering with it every day.</li>
+        <li>🌲 <b>I enjoy various natural sights I stumble across</b> and like taking photos out of them.</li>
+        <li>💿 <b>Additionally interested</b> in perservation/archiving, occasional gaming etc.</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li><b>Pronouns:</b> Any <small><i>(I don't care :p)</i></small></li>
+        <li><b>Timezone:</b> GMT+2 <small><i>(CEST)</i></small></li>
+        </ul>
+        <br>
+        <div>You can view my projects <a href="/projects">here&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a>, and if you just wanna hit me up, <a href="/socials">here&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a>.</div>
+        <div>I also have a blog documenting various things, <a href="/blog">here&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a>.</div>
       </div>
    </div>
-   <div class="text-3xl font-bold m-1">Buttons ⭐</div>
-<div class="grid gap-2 pb-4 justify-center"
-     style="grid-template-columns: repeat(auto-fit, minmax(88px, auto));">
-      <a href="https://discord.gg/wDxDKJU2sj"><img src="/img/8831/axeon2.png" title="Axeon Network" style="image-rendering:pixelated;" class="p-1 max-w-none"></a>
-      <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World" style="image-rendering:pixelated;" class="p-1 max-w-none"></a>
-      <img src="/img/8831/gnu-linux.gif" title="Made on GNU/Linux" style="image-rendering:pixelated;" class="p-1 max-w-none">
-      <a href="https://archlinux.org"><img src="/img/8831/archlinux.gif" title="Arch Linux" style="image-rendering:pixelated;" class="p-1 max-w-none"></a>
-      <a href="https://code.visualstudio.com/"><img src="/img/8831/vscode.gif" title="Visual Studio Code" style="image-rendering:pixelated;" class="p-1 max-w-none"></a>
-      <a href="https://krita.org"><img src="/img/8831/krita.png" title="Krita" style="image-rendering:pixelated;" class="p-1 max-w-none"></a>
-      <img src="/img/8831/ublockoriginnow.png" title="uBlock Origin Now" style="image-rendering:pixelated;" class="p-1 max-w-none">
-      <img src="/img/8831/ieexplode.gif" title="Internet Exploder" style="image-rendering:pixelated;" class="p-1 max-w-none">
-      <img src="/img/8831/saynotoweb3.gif" title="Say no to Web3" style="image-rendering:pixelated;" class="p-1 max-w-none">
-      </div>
-      
-      <div class="grid justify-items-center">
-         <div class="text-1xl font-semibold">My button!</div>
-         <img src="/img/8831/kay.png" style="image-rendering:pixelated;">
-         <code class="text-base pb-4">&lt;a href="http://clyron.is-a.dev"&gt;&lt;img src="http://clyron.is-a.dev/img/8831/kay.png"&gt;</code>
-         <img src="/img/8831/kaynight.png" style="image-rendering:pixelated;">
-         <code class="text-base">&lt;a href="http://clyron.is-a.dev"&gt;&lt;img src="http://clyron.is-a.dev/img/8831/kaynight.png"&gt;</code>
-         <div class="text italic text-sm pb-4">Select the HTML code, then copy and paste</div>
+    <Buttons />
+          <div class="content footer">
+    		<div><b>Webrings:</b></div>
+         <div><b><a href="https://fediring.net/">Fediring</a>:</b> <a href="https://fediring.net/previous?host=clyron.is-a.dev">&lt;&#45;&#45;</a> <a href="https://fediring.net/random">Random</a> <a href="https://fediring.net/next?host=clyron.is-a.dev">&#45;&#45;&gt;</a></div>
          </div>
-   <div class="text-3xl font-bold m-1">Webrings 🪐</div>
-   <p>
-   <div class="box-border border-2 rounded-2xl p-4 m-4">
-      <div class="flex justify-center">
-      <a href="https://fediring.net/" class="text-2xl font-semibold mb-1">Fediring</a>
-      </div>
-      <div class="flex justify-center">
-      <a class="button mr-2" href="https://fediring.net/previous?host=clyron.is-a.dev" class="text-2xl" title="Previous Website"><i class="fas fa-arrow-left"></i></a>
-      <a class="button ml-2 mr-2" href="https://fediring.net/random" class="text-2xl" title="Random Website"><i class="fas fa-shuffle"></i></a>
-      <a class="button ml-2" href="https://fediring.net/next?host=clyron.is-a.dev" class="text-2xl" title="Next Website"><i class="fas fa-arrow-right"></i></a>
-      </div>
-     </div>
-   </p>
 </Layout>

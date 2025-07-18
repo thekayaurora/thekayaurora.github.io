@@ -1,102 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Site.astro';
 ---
 
 <Layout title="Socials">
-   <div class="text-3xl font-bold m-1">Socials 👥</div>
-   <div class="text-base">
-      <p>Where you can find me!</p>
-      <br>
+   <div class="head">
+      <div id="title">👥 Socials!</div>
+      <div>Where I am!</div>
    </div>
-   <div class="text-2xl font-bold m-1">High priority socials</div>
-   <div class="text-base">The following socials are those that I do check most often.</div>
-   <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
-      <Card
-        name="Discord Server"
-        icon="fab fa-discord"
-        type="Axeon Network"
-        desc="Est. 2017, just yet another general hangout community"
-        btn_href="https://discord.gg/wDxDKJU2sj"
-        btn_action="Join"
-        rel="">
-      </Card>
-      <Card 
-        name="Mastodon"
-        icon="fab fa-mastodon"
-        type="@clyron@wetdry.world"
-        desc="The Fediverse! Feel free to follow what am I up to!"
-        btn_href="https://wetdry.world/@clyron"
-        btn_action="Visit"
-        rel="me">
-      </Card>
-      <Card 
-        name="Bluesky"
-        icon="fab fa-bluesky"
-        type="@clyron.is-a.dev"
-        desc="Twitter but better. Using probably just as much as Fedi."
-        btn_href="https://bsky.app/profile/clyron.is-a.dev"
-        btn_action="Visit"
-        rel="">
-      </Card>
-    </div>
-    <div class="text-2xl font-bold m-1">Accounts elsewhere</div>
-    <div class="text-base">My other public accounts. Not all may necessarily be socials.</div>
-       <div class="grid md:grid-cols-3 md:p-4 justify-items-center">
-       <Card 
-        name="GitHub"
-        icon="fab fa-github"
-        type="theclyron"
-        desc="Where all my open-source code projects are hosted at"
-        btn_href="https://github.com/theclyron"
-        btn_action="Visit"
-        rel="">
-       </Card>
-       <Card 
-        name="YouTube"
-        icon="fab fa-youtube"
-        type="KayFusion"
-        desc="Yes, I make YouTube videos... sometimes"
-        btn_href="https://youtube.com/@itskayfusion"
-        btn_action="Visit"
-        rel="">
-      </Card>
-      <Card 
-        name="Internet Archive"
-        icon="fas fa-building-columns"
-        type="lynxmic"
-        desc="I (rarely) do perservation work, but when I do it will be there"
-        btn_href="https://archive.org/details/@lynxmic"
-        btn_action="Visit"
-        rel="">
-      </Card>
-     <Card 
-        name="Twitter"
-        icon="fab fa-twitter"
-        type="@Lynxmic (Archive)"
-        desc="Self-hosted archive, I stopped using Twitter (aside lurking, I admit)"
-        btn_href="https://tweets.clyron.is-a.dev"
-        btn_action="Visit"
-        rel="">
-     </Card>
-     <Card 
-     name="DeviantArt"
-     icon="fab fa-deviantart"
-     type="clyron1"
-     desc="May or may not use in the future, currently only have bc of login walls"
-     btn_href="https://www.deviantart.com/clyron1"
-     btn_action="Visit"
-     rel="">
-     </Card>
-     <Card 
-     name="Geometry Dash"
-     icon=""
-     type="elclyron"
-     desc="Rarely play nowadays, feel free to check my profile still ig"
-     btn_href="https://gdbrowser.com/u/elclyron"
-     btn_action="Visit"
-     rel="">
-     </Card>
-      </div>
-  </div>
+   <div>I am most frequently active on the following platforms:</div>
+   <br>
+   <ul class="list nobullet">
+   <li><i class="fab fa-discord"></i>&nbsp;<b>Discord Server:</b>&nbsp;<a id="link" href="/discord">Axeon Network&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   <li><i class="fab fa-discord"></i>&nbsp;<b>Discord Username:</b>&nbsp;<a id="link" href="http://discord.com/users/241190628178788353">kayaurora&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   <li><i class="fab fa-mastodon"></i>&nbsp;<b>Mastodon:</b>&nbsp;<a id="link" href="http://wetdry.world/@clyron">@clyron@wetdry.world&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   <li><i class="fab fa-bluesky"></i>&nbsp;<b>Bluesky:</b>&nbsp;<a id="link" href="http://bsky.app/profile/did:plc:fqvzbqsjzjkl4o66rfp6cgk3">@clyron.is-a.dev&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   </ul>
+   <br>
+   <div>Accounts everywhere else:</div>
+   <br>
+   <ul class="list nobullet">
+   <li><i class="fab fa-github"></i>&nbsp;<b>GitHub:</b>&nbsp;<a id="link" href="http://github.com/thekayaurora">thekayaurora&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   <li><i class="fab fa-youtube"></i>&nbsp;<b>YouTube:</b>&nbsp;<a id="link" href="http://youtube.com/@thekayaurora">KayAurora&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+   </ul>
 </Layout>

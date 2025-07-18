@@ -1,5 +1,5 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import Layout from "../../../layouts/Site.astro";
 
 type BlogPost = {
   frontmatter: {
@@ -40,22 +40,21 @@ taggedPosts.sort(
 ---
 
 <Layout title="Blog">
-   <div class="flex">
-   <div class="text-3xl font-bold m-1 grow">Blog ✏️</div>
-   <a class="button text-2xl ml-2 basis-[narrow]" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss"></i></a>
-   <a class="button text-2xl ml-2 basis-[narrow]" href="../lynxblog" title="Lynxmic Blog (for older blog posts)"><i class="fas fa-box-archive"></i></a>
+      <div class="head hasbtn">
+      <div>
+      <div id="title">✏️ Blog!</div>
+      <div>Posts tagged with <code>{tag}</code></div>
+      <div><a href="../feed.xml" id="rssfallback">Also available on RSS!</a></div>
+      </div>
+      <div>
+      <a class="button" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a>
+      </div>
    </div>
-   <div class="text-base">
-    <p>Posts tagged with <code>{tag}</code></p>
- </div>
-   <div class="grid md:p-4">
     {taggedPosts.map((post) => 
-    <div class="box-border border-2 rounded-2xl p-4 m-4">
-        <div class="text-2xl font-bold">{post.frontmatter.title}</div>
-        <div class="text-base italic">{post.frontmatter.desc}</div>
-        <div class="text-sm">🗓️ {post.frontmatter.date} ・ {post.frontmatter.tags && (<ul class="tags inline-flex gap-2">{post.frontmatter.tags.map(tag => (<li class="text-sm"><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
-        <div class="text-base"><a class="button" href={post.url}>Read</a></div>
+    <div id="blog">
+        <div><a href={post.url} id="postlink">{post.frontmatter.title}</a></div>
+        <div><i style="font-size:1.1rem">{post.frontmatter.desc || 'No description available'}</i></div>
+        <div>🗓️ {post.frontmatter.date} ・ {post.frontmatter.tags && (<ul id="tagarray">{post.frontmatter.tags.map(tag => (<li><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
        </div>
     )}
-    </div>
 </Layout>

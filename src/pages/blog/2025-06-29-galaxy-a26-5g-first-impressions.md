@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/Blog.astro"
 title: "Galaxy A26 5G first impressions"
 desc: "First phone upgrade in over 2 years"
 date: 29 June 2025
