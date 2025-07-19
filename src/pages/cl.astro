@@ -12,10 +12,13 @@ import Layout from '../layouts/Site.astro';
       <small style="margin:1;"><i>(19.07.2025)</i></small>
       <ul id="list">
          <li>
-            In <code>style.css</code>, all <code>rem</code> values have been converted to <code>em</code>. Also, <code>background-color</code> has been added <b>as a fallback for ancient browsers</b>.
+            Added <b>additional fallbacks for ancient browsers</b> in <code>style.css</code>, with <code>rem</code> values falling back to <code>px</code> and the inclusion of <code>background-color</code> as an alternative to the gradient.
          </li>
          <li>
             Images in the blog now all use <b>absolute instead of relative URLs</b>. Astro v5 automatically ""optimizes images"" with relative URLs in markdown <b>and converts them to WebP</b>, only supported in modern browsers, with no way to easily prevent it :(
+         </li>
+         <li>
+            Fixed an issue where a random shape <small>(a partial star)</small> would appear floating in some older browsers.
          </li>
       </ul>
       <br>
