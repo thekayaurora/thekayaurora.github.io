@@ -8,6 +8,17 @@ import Layout from '../layouts/Site.astro';
       <div>Website version history and changelogs</div>
    </div>
    <div>
+      <div id="section">3.0.1</div>
+      <small style="margin:1;"><i>(19.07.2025)</i></small>
+      <ul id="list">
+         <li>
+            In <code>style.css</code>, all <code>rem</code> values have been converted to <code>em</code>. Also, <code>background-color</code> has been added <b>as a fallback for ancient browsers</b>.
+         </li>
+         <li>
+            Images in the blog now all use <b>absolute instead of relative URLs</b>. Astro v5 automatically ""optimizes images"" with relative URLs in markdown <b>and converts them to WebP</b>, only supported in modern browsers, with no way to easily prevent it :(
+         </li>
+      </ul>
+      <br>
       <div id="section">3.0</div>
       <small style="margin:1;"><i>(18.07.2025)</i></small>
       <ul id="list">
