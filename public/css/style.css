@@ -9,10 +9,10 @@ html {
     ) no-repeat, rgb(28, 42, 51);
     color: rgb(189, 216, 229);
     font-size: 17.5px;
-    font-family: "inter", Courier, monospace, sans-serif;
+    font-family: "inter", monospace, sans-serif;
     }
 pre, code {
-    font-family: Courier, monospace;
+    font-family: monospace;
 }
 a {
      color: rgb(189, 216, 229);
@@ -143,11 +143,14 @@ button.button:disabled {
     font-style: italic;
 }
 #tagarray {
-      display: inline-block;
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-   }
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+#tagarray li {
+    display: inline;
+}
 .footer {
     display: block;
     text-align: center;
@@ -172,7 +175,7 @@ button.button:disabled {
        font-style: normal;
        transition: 0.2s;
   }
-  #tagarray {
+ #tagarray {
       display: inline-flex;
       gap: 0.5em;
       list-style-type: none;
