@@ -2,11 +2,6 @@
 html {
     background-size: 100% 300px, auto;
     background-color: rgb(28, 42, 51);
-    background: linear-gradient(
-        to bottom,
-        rgb(7, 40, 54) 0px,      
-        rgb(28, 42, 51) 150px
-    ) no-repeat, rgb(28, 42, 51);
     color: rgb(189, 216, 229);
     font-size: 17.5px;
     font-family: "inter", monospace, sans-serif;
@@ -69,7 +64,7 @@ a {
 }
 .blogpost img {
     display: block;
-    max-width: 100%;
+    width: expression(this.width > document.body.clientWidth ? "100%" : "auto");
     height: auto;
     margin: 16px auto;
 }
@@ -162,7 +157,7 @@ button.button:disabled {
 
 /* Modern browser-specific CSS */
 @supports (gap: 0.5em) {
-    .tag {
+   .tag {
        background-color: rgb(70, 82, 95);
        color: rgb(189, 216, 229);
        padding-top: 1px;
@@ -175,7 +170,7 @@ button.button:disabled {
        font-style: normal;
        transition: 0.2s;
   }
- #tagarray {
+  #tagarray {
       display: inline-flex;
       gap: 0.5em;
       list-style-type: none;
@@ -185,6 +180,11 @@ button.button:disabled {
 }
 @supports (display: flex) {
 html {
+    background: linear-gradient(
+    to bottom,
+      rgb(7, 40, 54) 0px,      
+      rgb(28, 42, 51) 150px
+    ) no-repeat, rgb(28, 42, 51);
     font-size: 1.1rem;
 }
   #rssfallback {
@@ -219,6 +219,10 @@ html {
     position: relative;
     transition: 0.2s;
 }
+.blogpost img {
+    max-width: 100%;
+    height: auto;
+}
 #link,
 #link:hover,
 #link:focus,
@@ -247,7 +251,7 @@ html {
     transform: translateX(-50%) scaleX(1);
 }
 .stars {
-    display: block;
+    display: block !important;
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -257,7 +261,7 @@ html {
     animation: fadein 0.3s;
 }
 .star {
-    display: block;
+    display: block !important;
     position: fixed;
     background: url('../img/star.png') no-repeat center;
     background-size: contain;
