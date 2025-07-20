@@ -32,9 +32,6 @@ a {
 }
 /* CSS code for the visual elements */
 .navbar {
-        opacity: 0;
-    transform: translateY(-20px);
-    animation: slide 0.4s ease-out forwards;
      padding: 24px;
      font-family: "quicksand";
      font-size: 15px;
@@ -172,9 +169,6 @@ button.button:disabled {
     text-align: center;
     padding: 16px;
 }
-.star, .stars {
-    display: none;
-}
 
 /* Modern browser-specific CSS */
 @supports (gap: 0.5em) {
@@ -231,7 +225,6 @@ html {
     font-size: 1.75rem;
 }
 .stars {
-    display: block;
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -241,7 +234,6 @@ html {
     animation: fadein 0.3s;
 }
 .star {
-    display: block;
     position: fixed;
     background: url('../img/star.png') no-repeat center;
     background-size: contain;
