@@ -64,7 +64,7 @@ a {
 }
 .blogpost img {
     display: block;
-    width: expression(this.width > document.body.clientWidth ? "100%" : "auto");
+    max-width: 100%;
     height: auto;
     margin: 16px auto;
 }
@@ -152,7 +152,7 @@ button.button:disabled {
     padding: 16px;
 }
 .stars, .star {
-    display: none !important;
+    visibility: hidden;
 }
 
 /* Modern browser-specific CSS */
@@ -219,10 +219,6 @@ html {
     position: relative;
     transition: 0.2s;
 }
-.blogpost img {
-    max-width: 100%;
-    height: auto;
-}
 #link,
 #link:hover,
 #link:focus,
@@ -251,7 +247,7 @@ html {
     transform: translateX(-50%) scaleX(1);
 }
 .stars {
-    display: block !important;
+    visibility: visible;
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -261,7 +257,7 @@ html {
     animation: fadein 0.3s;
 }
 .star {
-    display: block !important;
+    visibility: visible;
     position: fixed;
     background: url('../img/star.png') no-repeat center;
     background-size: contain;
