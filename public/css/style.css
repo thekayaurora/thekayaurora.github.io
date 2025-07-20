@@ -38,7 +38,7 @@ a {
      text-transform: lowercase;
 }
 .center {
-    display: flex;
+    display: block;
     text-align: center;
 }
 #link,
