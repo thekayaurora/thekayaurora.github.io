@@ -41,30 +41,14 @@ a {
     display: block;
     text-align: center;
 }
-#link,
-#postlink {
+#link, #postlink {
     text-decoration: none;
-    position: relative;
-    transition: 0.2s;
 }
-#link::after,
-#postlink::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 100%;
-    height: 1.5px;
-    background: currentColor;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-#link:hover::after,
-#link:focus::after,
-#postlink:hover::after,
-#postlink:focus::after {
-    transform: translateX(-50%) scaleX(1);
+#link:hover,
+#link:focus,
+#postlink:hover,
+#postlink:focus {
+    text-decoration: underline;
 }
 #logo {
      width: 195px;
@@ -159,7 +143,7 @@ button.button:disabled {
     font-style: italic;
 }
 #tagarray {
-      display: inline-flex;
+      display: inline-block;
       list-style-type: none;
       padding-left: 0;
       margin: 0;
@@ -223,6 +207,38 @@ html {
 #postlink {
     font-weight: bold;
     font-size: 1.75rem;
+}
+#link,
+#postlink {
+    position: relative;
+    transition: 0.2s;
+}
+#link,
+#link:hover,
+#link:focus,
+#postlink,
+#postlink:hover,
+#postlink:focus {
+    text-decoration: none;
+    }
+#link::after,
+#postlink::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+#link:hover::after,
+#link:focus::after,
+#postlink:hover::after,
+#postlink:focus::after {
+    transform: translateX(-50%) scaleX(1);
 }
 .stars {
     position: fixed;
