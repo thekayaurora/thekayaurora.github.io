@@ -154,7 +154,7 @@ button.button:disabled {
     padding: 16px;
 }
 .stars, .star {
-    display: none;
+    display: none !important;
 }
 
 /* Modern browser-specific CSS */
