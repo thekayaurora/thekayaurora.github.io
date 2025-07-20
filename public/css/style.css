@@ -153,6 +153,9 @@ button.button:disabled {
     text-align: center;
     padding: 16px;
 }
+.stars, .star {
+    display: none;
+}
 
 /* Modern browser-specific CSS */
 @supports (gap: 0.5em) {
@@ -241,6 +244,7 @@ html {
     transform: translateX(-50%) scaleX(1);
 }
 .stars {
+    display: block;
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -250,6 +254,7 @@ html {
     animation: fadein 0.3s;
 }
 .star {
+    display: block;
     position: fixed;
     background: url('../img/star.png') no-repeat center;
     background-size: contain;
