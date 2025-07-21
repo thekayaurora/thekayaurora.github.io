@@ -25,7 +25,7 @@ import Footer from '../components/Footer.astro';
 	<body>
     <Navbar />
          <div class="content blogpost">
-          <div id="title">{frontmatter.title}</div>
+          <h1 id="title">{frontmatter.title}</h1>
             <div><i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
             <div>🗓️ {frontmatter.date} ・ {frontmatter.tags && (<ul id="tagarray">{frontmatter.tags.map(tag => (<li><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
           <br>

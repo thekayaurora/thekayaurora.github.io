@@ -12,6 +12,10 @@ pre, code {
 a {
      color: rgb(189, 216, 229);
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
 .list {
     margin-top: 3px;
     margin-bottom: 3px;
@@ -151,12 +155,6 @@ button.button:disabled {
     text-align: center;
     padding: 16px;
 }
-.stars, .star {
-    visibility: hidden;
-}
-.star img {
-    display: none;
-}
 
 /* Modern browser-specific CSS */
 @supports (gap: 0.5em) {
@@ -250,7 +248,6 @@ html {
     transform: translateX(-50%) scaleX(1);
 }
 .stars {
-    visibility: visible;
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -260,7 +257,6 @@ html {
     animation: fadein 0.3s;
 }
 .star {
-    visibility: visible;
     position: fixed;
     background: url('../img/star.png') no-repeat center;
     background-size: contain;
