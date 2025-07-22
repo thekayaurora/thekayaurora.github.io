@@ -1,40 +1,26 @@
 /* Base styles for the website (background, fonts, colors etc.) */
 html {
-    background-size: 100% 300px, auto;
-    background-color: rgb(28, 42, 51);
-    color: rgb(189, 216, 229);
-    font-size: 17.5px;
-    font-family: "inter", monospace, sans-serif;
+     background: url(../img/rf/bg.gif) repeat;
+     color: white;
+     font-size: 17.5px;
     }
 pre, code {
     font-family: monospace;
-}
-a {
-     color: rgb(189, 216, 229);
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
 }
-.list {
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-.list.nobullet {
-    list-style-type: none;
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-.list li, .list.nobullet li {
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
 /* CSS code for the visual elements */
-.navbar {
-     padding: 24px;
-     font-family: "quicksand";
-     font-size: 15px;
-     text-transform: lowercase;
+.rf--navbar {
+    display: block;
+    text-align: center;
+}
+.mof--hidden {
+    display: block;
+}
+.rf--hidden {
+    display: none;
 }
 .center {
     display: block;
@@ -42,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #link, #postlink {
     text-decoration: none;
+    color: white;
 }
 #link:hover,
 #link:focus,
@@ -49,16 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 #postlink:focus {
     text-decoration: underline;
 }
-#logo {
-     width: 195px;
-     height: auto;
-     padding-bottom: 1%;
-     pointer-events: none;
-}
 .content {
-    animation: fade 0.3s ease-in-out;
-    animation-delay: 0.3s;
-    animation-fill-mode: both;
     padding-top: 16px;
     padding-bottom: 16px;
 }
@@ -89,20 +67,8 @@ h1, h2, h3, h4, h5, h6 {
 .head.hasbtn .button {
     display: none;
 }
-#title {
+#title, #section, #postlink {
     font-weight: bold;
-    font-size: 32px;
-    font-family: "quicksand";
-}
-#section {
-    font-weight: bold;
-    font-size: 24px;
-    font-family: "quicksand";
-}
-#postlink {
-    font-weight: bold;
-    font-size: 28px;
-    font-family: "quicksand";
 }
 #eighteightthreeone {
     image-rendering: pixelated;
@@ -110,45 +76,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 2px;
     transition: 0.2s;
 }
-#eighteightthreeone:hover {
-    box-shadow: 0 2px 8px rgba(189, 216, 229, .3);
-    text-decoration: none !important;
-}
-a.button, button.button {
-      background-color: rgb(70, 82, 95);
-      color: rgb(189, 216, 229);
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 10px;
-      padding-right: 10px;
-      border-radius: 15px 15px 15px 15px;
-      border: 15px 15px 15px 15px white;
-      text-decoration: none !important;
-      transition: 0.2s;
-  }
-a.button:hover, .navbtn:hover, .tag:hover, button.button:hover {
-    background-color: rgb(58, 66, 75);
-}
-button.button:disabled {
-    background-color: rgb(70, 82, 95);
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-.tag {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 3px;
-    padding-right: 3px;
-    font-style: italic;
-}
+.tag,
 #tagarray {
-    display: inline-block;
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-#tagarray li {
-    display: inline;
+    display: none;
 }
 .footer {
     display: block;
@@ -157,8 +87,10 @@ button.button:disabled {
 }
 
 /* Modern browser-specific CSS */
+/*
 @supports (gap: 0.5em) {
    .tag {
+       display: block;
        background-color: rgb(70, 82, 95);
        color: rgb(189, 216, 229);
        padding-top: 1px;
@@ -181,12 +113,34 @@ button.button:disabled {
 }
 @supports (display: flex) {
 html {
+    background-size: 100% 300px, auto;
     background: linear-gradient(
     to bottom,
       rgb(7, 40, 54) 0px,      
       rgb(28, 42, 51) 150px
     ) no-repeat, rgb(28, 42, 51);
+    background-color: rgb(28, 42, 51);
+    color: rgb(189, 216, 229);
     font-size: 1.1rem;
+    font-family: "inter", monospace, sans-serif;
+}
+a,
+.navbar #link,
+#postlink {
+     color: rgb(189, 216, 229);
+}
+.list {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.list.nobullet {
+    list-style-type: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.list li, .list.nobullet li {
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
   #rssfallback {
     display: none;
@@ -199,21 +153,34 @@ html {
     opacity: 0;
     transform: translateY(-20px);
     animation: slide 0.4s ease-out forwards;
+    padding: 24px;
+    font-family: "quicksand";
     font-size: 1rem;
+    text-transform: lowercase;
+}
+.mof--hidden {
+    display: none;
+}
+.rf--hidden {
+    display: block;
 }
 #logo {
-    width: 11rem;
+    width: 195px;
     height: auto;
+    padding-bottom: 1%;
+    pointer-events: none;
 }
 #title {
-    font-size: 1.875rem;
+    font-size: 32px;
+    font-family: "quicksand";
 }
 #section {
-    font-size: 1.5rem;
+    font-size: 24px;
+    font-family: "quicksand";
 }
 #postlink {
-    font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 28px;
+    font-family: "quicksand";
 }
 #link,
 #postlink {
@@ -247,6 +214,35 @@ html {
 #postlink:focus::after {
     transform: translateX(-50%) scaleX(1);
 }
+a.button, button.button {
+      background-color: rgb(70, 82, 95);
+      color: rgb(189, 216, 229);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 15px 15px 15px 15px;
+      border: 15px 15px 15px 15px white;
+      text-decoration: none !important;
+      transition: 0.2s;
+  }
+a.button:hover, .navbtn:hover, .tag:hover, button.button:hover {
+    background-color: rgb(58, 66, 75);
+}
+button.button:disabled {
+    background-color: rgb(70, 82, 95);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.content {
+    animation: fade 0.3s ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+#eighteightthreeone:hover {
+    box-shadow: 0 2px 8px rgba(189, 216, 229, .3);
+    text-decoration: none !important;
+}
 .stars {
     position: fixed;
     inset: 0;
@@ -272,7 +268,6 @@ html {
 .star5 { width: 32px; height: 32px; top: 12vh; left: 85vw; }
 }
 
-/* Tablet/desktop-specific CSS */
 @media (min-width: 768px) {
   .content {
     margin-left: 100px;
@@ -296,6 +291,7 @@ html {
     max-width: 65%;
   }
 }
+
 
 /* Other CSS code, such as keyframes for animations and custom fonts used */
 @keyframes slide {
