@@ -110,6 +110,29 @@ h1, h2, h3, h4, h5, h6 {
       padding-left: 0;
       margin: 0;
    }
+   .stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    animation: fadein 0.3s;
+}
+.star {
+    position: fixed;
+    background: url('../img/star.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: -1;
+    animation: star 60s linear infinite;
+    animation-delay: 0.9s
+}
+.star1 { width: 30px; height: 30px; top: 5vh; left: 10vw; }
+.star2 { width: 25px; height: 25px; top: 8vh; left: 30vw; }
+.star3 { width: 35px; height: 35px; top: 10vh; left: 50vw; }
+.star4 { width: 28px; height: 28px; top: 6vh; left: 70vw; }
+.star5 { width: 32px; height: 32px; top: 12vh; left: 85vw; }
 }
 @supports (display: flex) {
 html {
@@ -243,29 +266,6 @@ button.button:disabled {
     box-shadow: 0 2px 8px rgba(189, 216, 229, .3);
     text-decoration: none !important;
 }
-.stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.1s linear;
-    animation: fadein 0.3s;
-}
-.star {
-    position: fixed;
-    background: url('../img/star.png') no-repeat center;
-    background-size: contain;
-    pointer-events: none;
-    z-index: -1;
-    animation: star 60s linear infinite;
-    animation-delay: 0.9s
-}
-.star1 { width: 30px; height: 30px; top: 5vh; left: 10vw; }
-.star2 { width: 25px; height: 25px; top: 8vh; left: 30vw; }
-.star3 { width: 35px; height: 35px; top: 10vh; left: 50vw; }
-.star4 { width: 28px; height: 28px; top: 6vh; left: 70vw; }
-.star5 { width: 32px; height: 32px; top: 12vh; left: 85vw; }
 }
 
 @media (min-width: 768px) {
