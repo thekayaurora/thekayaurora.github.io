@@ -7,8 +7,6 @@ import { d } from "../config";
 /* import { ClientRouter } from 'astro:transitions'; */
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import RetroFrontend from "../components/RetroFrontend.astro";
-import ModernFrontend from "../components/ModernFrontend.astro";
 ---
 
 <!doctype html>
@@ -24,9 +22,8 @@ import ModernFrontend from "../components/ModernFrontend.astro";
 		<link rel="icon" type="image/svg+xml" href={d.favicon} />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
+        <link rel="stylesheet" href="../../css/style.css" type="text/css">
 		<title>{title} ~ {d.name}</title>
-	    <RetroFrontend />
-        <ModernFrontend />
 	</head>
 	<body>
         <Navbar />

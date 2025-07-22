@@ -4,8 +4,6 @@ import { d } from "../config";
 /* import { ClientRouter } from 'astro:transitions'; */
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import RetroFrontend from "../components/RetroFrontend.astro";
-import ModernFrontend from "../components/ModernFrontend.astro";
 ---
 
 <!doctype html>
@@ -21,16 +19,15 @@ import ModernFrontend from "../components/ModernFrontend.astro";
     <link rel="icon" type="image/svg+xml" href={d.favicon} />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
+    <link rel="stylesheet" href="../../css/style.css" type="text/css">
 		<title>{frontmatter.title} ~ {d.name}</title>
-    <RetroFrontend />
-    <ModernFrontend />
 	</head>
 	<body>
     <Navbar />
          <div class="content blogpost">
           <h1 id="title">{frontmatter.title}</h1>
             <div><i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
-            <div><div class="rf--hidden">🗓️</div> {frontmatter.date} {frontmatter.tags && (<ul id="tagarray" class="rf--hidden">・ {frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+            <div>🗓️ {frontmatter.date} {frontmatter.tags && (<ul id="tagarray" class="rf--hidden">・ {frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
           <br>
            <div>
 	        	<slot />
