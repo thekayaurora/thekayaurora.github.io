@@ -1,94 +1,5 @@
-/* Base styles for the website (background, fonts, colors etc.) */
-html {
-     background: url(../img/rf/bg.gif) repeat;
-     color: white;
-     font-size: 17.5px;
-    }
-pre, code {
-    font-family: monospace;
-}
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-}
-/* CSS code for the visual elements */
-.rf--navbar {
-    display: block;
-    text-align: center;
-}
-.mof--hidden {
-    display: block;
-}
-.rf--hidden {
-    display: none;
-}
-.center {
-    display: block;
-    text-align: center;
-}
-#link, #postlink {
-    text-decoration: none;
-    color: white;
-}
-#link:hover,
-#link:focus,
-#postlink:hover,
-#postlink:focus {
-    text-decoration: underline;
-}
-.content {
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-#blog {
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-.blogpost img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 16px auto;
-}
-.blogpost p,
-.blogpost li {
-    line-height: 1.3;
-}
-.head {
-     padding-top: 16px;
-     padding-bottom: 16px;
-     flex-grow: 1;
-}
-.head.hasbtn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.head.hasbtn .button {
-    display: none;
-}
-#title, #section, #postlink {
-    font-weight: bold;
-}
-#eighteightthreeone {
-    image-rendering: pixelated;
-    padding-left: 2px;
-    padding-right: 2px;
-    transition: 0.2s;
-}
-.tag,
-#tagarray {
-    display: none;
-}
-.footer {
-    display: block;
-    text-align: center;
-    padding: 16px;
-}
-
-/* Modern browser-specific CSS */
-
-@supports (gap: 0.5em) {
+<style is:global>
+    @supports (gap: 0.5em) {
    .tag {
        display: block;
        background-color: rgb(70, 82, 95);
@@ -121,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .star {
     position: fixed;
-    background: url('../img/star.png') no-repeat center;
+    background: url('../../img/star.png') no-repeat center;
     background-size: contain;
     pointer-events: none;
     z-index: -1;
@@ -146,6 +57,22 @@ html {
     color: rgb(189, 216, 229);
     font-size: 1.1rem;
     font-family: "inter", monospace, sans-serif;
+}
+.content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+#blog {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.blogpost p,
+.blogpost li {
+    line-height: 1.3;
+}
+.center {
+    display: block;
+    text-align: center;
 }
 a,
 .navbar #link,
@@ -194,14 +121,17 @@ a,
     pointer-events: none;
 }
 #title {
+    font-weight: bold;
     font-size: 32px;
     font-family: "quicksand";
 }
 #section {
+    font-weight: bold;
     font-size: 24px;
     font-family: "quicksand";
 }
 #postlink {
+    font-weight: bold;
     font-size: 28px;
     font-family: "quicksand";
 }
@@ -266,6 +196,11 @@ button.button:disabled {
     box-shadow: 0 2px 8px rgba(189, 216, 229, .3);
     text-decoration: none !important;
 }
+.head.hasbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 }
 
 @media (min-width: 768px) {
@@ -291,9 +226,6 @@ button.button:disabled {
     max-width: 65%;
   }
 }
-
-
-/* Other CSS code, such as keyframes for animations and custom fonts used */
 @keyframes slide {
     to {
         opacity: 1;
@@ -311,9 +243,10 @@ button.button:disabled {
 }
 @font-face {
     font-family: "inter";
-    src: url("fonts/inter.ttf");
+    src: url("../../css/fonts/inter.ttf");
 }
 @font-face {
     font-family: "quicksand";
-    src: url("fonts/quicksand.ttf");
+    src: url("../../css/fonts/quicksand.ttf");
 }
+</style>

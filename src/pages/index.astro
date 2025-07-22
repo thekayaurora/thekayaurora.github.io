@@ -10,21 +10,16 @@ import Buttons from '../components/Buttons.astro';
       <div>You landed on <b>{d.name}</b>'s personal website!</div>
    </div>
       <div>Who I am:
-        <ul class="mof--hidden">
-         <li><b>I am a tech (mainly software) nerd</b> and enjoy tinkering with it every day.</li>
-         <li><b>I enjoy various natural sights I stumble across</b> and like taking photos out of them.</li>
-         <li><b>Additionally interested</b> in perservation/archiving, occasional gaming etc.</li>
-         <li><b>Any Pronouns</b>, timezone GMT+2 <small><i>(CEST)</i></small></li>
-        </ul>
-        <ul class="list nobullet rf--hidden">
+        <ul class="list nobullet">
         <li>💻 <b>I am a tech (mainly software) nerd</b> and enjoy tinkering with it every day.</li>
         <li>🌲 <b>I enjoy various natural sights I stumble across</b> and like taking photos out of them.</li>
         <li>💿 <b>Additionally interested</b> in perservation/archiving, occasional gaming etc.</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li><b>Pronouns:</b> Any <small><i>(I don't care :p)</i></small></li>
-        <li><b>Timezone:</b> GMT+2 <small><i>(CEST)</i></small></li>
+        <li class="rf--hidden"></li>
+        <li class="rf--hidden"></li>
+        <li class="rf--hidden"></li>
+        <li class="rf--hidden"><b>Pronouns:</b> {d.pronouns} <small><i>(I don't care :p)</i></small></li>
+        <li class="rf--hidden"><b>Timezone:</b> GMT{d.tz} <small><i>({d.tzname})</i></small></li>
+        <li><div class="mof--hidden"><b>{d.pronouns} Pronouns</b>, timezone GMT{d.tz} <small><i>({d.tzname})</i></small></div></li>
         </ul>
         <br>
         <div>You can view my projects <a href="/projects">here</a>&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i>, and if you just wanna hit me up, <a href="/socials">here</a>&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i>.</div>

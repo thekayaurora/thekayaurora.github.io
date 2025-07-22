@@ -26,17 +26,23 @@ posts.sort((a, b) => {
       <div>
       <h1 id="title">✏️ Blog!</h1>
       <div>Various talk!</div>
-      <div><a href="../feed.xml" id="rssfallback">Also available on RSS!</a></div>
+      <div><a href="../feed.xml" class="mof--hidden">Also available on RSS!</a></div>
       </div>
       <div>
-      <a class="button" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a>
+      <a class="button rf--hidden" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a>
       </div>
    </div>
     {posts.map((post) => 
-    <div id="blog">
-        <h1><a href={post.url} id="postlink">{post.frontmatter.title}</a></h1>
+    <div id="blog" class="rf--hidden">
+        <div><a href={post.url} id="postlink">{post.frontmatter.title}</a></div>
         <div><i style="font-size:1.1rem">{post.frontmatter.desc || 'No description available'}</i></div>
-        <div>🗓️ {post.frontmatter.date} ・ {post.frontmatter.tags && (<ul id="tagarray">{post.frontmatter.tags.map(tag => (<li><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+        <div>🗓️ {post.frontmatter.date} {post.frontmatter.tags && (<ul id="tagarray" class="rf--hidden">・ {post.frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
        </div>
+    <div class="mof--hidden" style="padding-top:8px; padding-bottom:8px;">
+        <ul style="margin-top:0; margin-bottom:0;">
+        <li><h2><a href={post.url}>{post.frontmatter.title}</a></h2></li>
+        </ul>
+        <div>{post.frontmatter.date} - <i style="font-size:1.1rem">{post.frontmatter.desc || 'No description available'}</i></div>
+    </div>
     )}
 </Layout>

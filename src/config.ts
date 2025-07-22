@@ -6,5 +6,9 @@ export const d = {
   copyrightyear: "2025", // Copyright year. Change at first site change of the year
   sourcecode: "thekayaurora/thekayaurora.github.io", // Location of the published source code, in format "username/repo". It has to be GitHub.
 
+  pronouns: "Any",
+  tz: "+2",
+  tzname: "CEST",
+
   faver: "6.7.2", // The version of FontAwesome to use, for some of the icons
 };
