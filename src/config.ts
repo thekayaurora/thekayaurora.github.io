@@ -10,5 +10,5 @@ export const d = {
   tz: "+2",
   tzname: "CEST",
 
-  faver: "6.7.2", // The version of FontAwesome to use, for some of the icons
+  faver: "7.0.0", // The version of FontAwesome to use, for some of the icons
 };

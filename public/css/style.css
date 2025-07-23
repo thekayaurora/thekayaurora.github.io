@@ -54,6 +54,9 @@ a {
 #nocss {
     display: none;
 }
+
+/* Modern Frontend */
+/*
     @supports (gap: 0.5em) {
    .tag {
        display: block;
@@ -170,10 +173,12 @@ a,
     display: block;
 }
 #logo {
+    background: url('../img/logo.png') no-repeat center center;
+    background-size: contain;
     width: 195px;
-    height: auto;
+    height: 71px;
+    margin: 0 auto;
     padding-bottom: 1%;
-    pointer-events: none;
 }
 #title {
     font-weight: bold;
