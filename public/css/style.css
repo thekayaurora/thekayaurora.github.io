@@ -56,7 +56,7 @@ a {
 }
 
 /* Modern Frontend */
-/*
+
     @supports (gap: 0.5em) {
    .tag {
        display: block;
