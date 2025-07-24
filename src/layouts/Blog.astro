@@ -24,11 +24,12 @@ import Footer from '../components/Footer.astro';
 	</head>
 	<body>
     <Navbar />
-         <div class="content blogpost">
-          <h1 id="title">{frontmatter.title}</h1>
-            <div><i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
-            <div>🗓️ {frontmatter.date} {frontmatter.tags && (<ul id="tagarray" class="rf--hidden">・ {frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
-          <br>
+        <div class="content blogpost">
+        <div class="head">
+        <h1 id="title">{frontmatter.title}</h1>
+        <div>{frontmatter.date}&nbsp;&nbsp;&bull;&nbsp;&nbsp;<i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
+        <div>{frontmatter.tags && (<ul id="tagarray" class="rf--hidden">{frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+        </div>
            <div>
 	        	<slot />
            </div>
