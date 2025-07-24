@@ -37,7 +37,7 @@ posts.sort((a, b) => {
         <ul>
         <li><h2><a href={post.url} id="postlink">{post.frontmatter.title}</a></h2></li>
         </ul>
-        <div>{post.frontmatter.date}&nbsp;&nbsp;&bull;&nbsp;&nbsp;<i style="font-size:1.1rem">{post.frontmatter.desc || 'No description available'}</i></div>
+        <div>{post.frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i style="font-size:1.1rem">{post.frontmatter.desc || 'No description available'}</i></div>
         <div>{post.frontmatter.tags && (<ul id="tagarray" class="rf--hidden">{post.frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
     </div>
     )}
