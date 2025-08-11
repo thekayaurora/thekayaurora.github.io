@@ -1,5 +1,5 @@
 <div>
-<h2 id="section" style="padding-top:16px; padding-bottom:16px;">⭐ Buttons!</h2>
+<h2 id="section">⭐ Buttons!</h2>
 <div>
       <a href="/discord"><img src="/img/8831/axeon2.png" title="Axeon Network" id="eighteightthreeone"></a>
       <a href="https://wetdry.world/@clyron"><img src="/img/8831/wetdryworld.png" title="Wet-Dry World" id="eighteightthreeone"></a>
@@ -16,11 +16,14 @@
          <div style="padding-top:10px; padding-bottom:10px;"><b>My buttons!</b></div>
          <img src="/img/8831/kay.png" id="eighteightthreeone" class="mybutton" data-copy='&lt;a href="http://clyron.is-a.dev"&gt;&lt;img src="http://clyron.is-a.dev/img/8831/kay.png"&gt;' style="cursor:pointer;">
          <img src="/img/8831/kaynight.png" id="eighteightthreeone" class="mybutton" data-copy='&lt;a href="http://clyron.is-a.dev"&gt;&lt;img src="http://clyron.is-a.dev/img/8831/kaynight.png"&gt;' style="cursor:pointer;">
-         <div id="clicktocopy" class="rf--hidden"><i>Click on one of the buttons to copy and paste the HTML code!</i></div>
+         <div id="clicktocopy" class="rf--hidden"></div>
          </div>
         </div>
         <script>
    const status = document.getElementById('clicktocopy');
+
+   const copyInstructions = '<i>Click on one of the buttons to copy and paste the HTML code!</i>';
+   status.innerHTML = copyInstructions;
 
    document.querySelectorAll('.mybutton').forEach(btn => {
      const element = btn as HTMLElement;
@@ -31,7 +34,7 @@
       .then(() => {
         status.innerHTML = '<b>✅ Copied!</b>';
         setTimeout(() => {
-          status.innerHTML = '<i>Click on one of the buttons to copy and paste the HTML code!</i>';
+          status.innerHTML = copyInstructions;
         }, 1000);
       });
   });

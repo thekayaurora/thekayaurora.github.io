@@ -8,9 +8,35 @@ import Layout from '../layouts/Site.astro';
       <div>Website version history and changelogs</div>
    </div>
    <div>
+      <h2 id="section">3.2</h2>
+      <small style="margin:1;"><i>(11.08.2025)</i></small>
+      <ul class="list">
+         <li>
+            <b>Added a <a href="/devices>">Devices</a> page</b>, including a list of devices I (Kay) own as well as PC Specs.
+         </li>
+         <li>
+            <b><a href="/blog">Blog</a></b>: Fixed padding of the RSS button in the modern frontend.
+         </li>
+         <li>
+            <b><a href="#">Changelog page</a></b>: Fixed margins in the text of the changelogs.
+         </li>
+         <li>
+            <b><a href="/">Home</a></b>: The message for copying the HTML code of 88x31 buttons is now <b>always loaded with JavaScript</b>.
+         </li>
+         <li>
+            <b><a href="/projects">Projects</a></b>: Reflect on current status of projects to date.
+         </li>
+         <li>
+            Removed the <code>content.config.ts</code> file due to it not being actually used.
+         </li>
+         <li>
+            Slight CSS code cleanup.
+         </li>
+      </ul>
+      <br>
       <h2 id="section">3.1</h2>
       <small style="margin:1;"><i>(24.07.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <i>This website release coincides with the one-year anniversary of <a href="/blog/2024-07-23-a-new-era">the initial website release and rebrand</a> <small>(1 year and 1 day but whatever)</small> and a <a href="/blog/2025-07-24-how-low-can-you-go-browser-compatibility">new blog post</a> along with it!</i>
          </li>
@@ -30,7 +56,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">3.0.1</h2>
       <small style="margin:1;"><i>(19.07.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Added <b>additional fallbacks for ancient browsers</b> in <code>style.css</code>, with <code>rem</code> values falling back to <code>px</code> and the inclusion of <code>background-color</code> as an alternative to the gradient.
          </li>
@@ -41,7 +67,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">3.0</h2>
       <small style="margin:1;"><i>(18.07.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <i>Starting from this version, this website will be referred to as kaywebsite, rather than clyronwebsite.</i>
          </li>
@@ -88,7 +114,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.5.2</h2>
       <small style="margin:1;"><i>(08.07.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Changed all Clyron references to <b>KayAurora</b>. Clyron is now being referred to as a previous alias, but the website <b>remains at clyron.is-a.dev for now.</b>
          </li>
@@ -105,7 +131,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.5.1</h2>
       <small style="margin:1;"><i>(04.07.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b><a href="/cairo">Cairo page</a></b>: Updated Reference Sheet to include a drawing of Cairo <b>with glasses on</b>.
          </li>
@@ -114,7 +140,7 @@ import Layout from '../layouts/Site.astro';
          </li>
          <li>
             <b><a href="/">Home</a></b>: Updated introduction to reflect on Lynxmic hitting 1,5K subs and mention Axeon's member count.
-         </li>
+         </li>Projects
          <li>
             <b><a href="/">Home</a></b>: On par with other 88x31 buttons in use, the Clyron button now <b>renders pixelated</b> and uses <b>relative instead of absolute URL</b>.
          </li>
@@ -128,7 +154,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.5</h2>
       <small style="margin:1;"><i>(03.07.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b>Tags have been implemented</b> in the blog! All blog posts have been retroactively applied tags.
          </li>
@@ -190,7 +216,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.4.2</h2>
       <small style="margin:1;"><i>(05.06.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Changed the Clyron logo from the ring previously used to the newly-introduced glowing star logo.
          </li>
@@ -201,7 +227,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.4.1</h2>
       <small style="margin:1;"><i>(02.06.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Updated an outdated link in the <a href="/projects"><b>Projects</b></a> page.
          </li>
@@ -212,7 +238,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.4</h2>
       <small style="margin:1;"><i>(25.05.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Added the <b>Changelog</b> (<code>/cl</code>) page <small>(the page you're currently looking at!)</small>, tracking version history and changes.
          </li>
@@ -241,7 +267,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.3.1</h2>
       <small style="margin:1;"><i>(30.04.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b><a href="/socials">Socials</a></b>: Mentions of <b>LynxPlaza</b> have been changed to <b>Axeon Network</b>, the new name of the Discord server.
          </li>
@@ -255,7 +281,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.3</h2>
       <small style="margin:1;"><i>(26.04.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b>Redesigned the navigation bar</b>. Removed the <i>I am just a semi-average internet user~</i> line and moved links outside the box.
          </li>
@@ -305,7 +331,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.2.1</h2>
       <small style="margin:1;"><i>(31.03.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b><a href="/cairo">Cairo page</a></b>: Updated Cairo profile picture and optimized page for mobile.
          </li>
@@ -319,7 +345,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.2</h2>
       <small style="margin:1;"><i>(30.03.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b><a href="/cairo">Cairo page</a></b>: Renamed from <b>Kairo to Cairo</b>, updated the body drawing to remove glasses, added profile picture and other additional basic info and lore.
          </li>
@@ -339,7 +365,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.1</h2>
       <small style="margin:1;"><i>(19.03.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Added a new page for <b>the new Clyron OC</b>, called <b><a href="/cairo">Kairo</a></b>, and updated introduction in <a href="/">homepage</a> to mention it.
          </li>
@@ -362,7 +388,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0.1</h2>
       <small style="margin:1;"><i>(03.03.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Updated <b>the Clyron 88x31 button</b> and added a Lynxmic 88x31 button in the website's files.
          </li>
@@ -373,7 +399,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0</h2>
       <small style="margin:1;"><i>(09.02.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b>Initial non-beta release!</b> This is reflected by links having been changed to remove mentions of <code>website-exp</code>. The website also fully replaces v1 as the default.
          </li>
@@ -390,7 +416,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta080225</h2>
       <small style="margin:1;"><i>(08.02.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Improvements to readability of blog posts.
          </li>
@@ -401,7 +427,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta070225</h2>
       <small style="margin:1;"><i>(07.02.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <b><a href="/">Home</a></b>: Added a quick introduction/biography.
          </li>
@@ -418,7 +444,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta030225</h2>
       <small style="margin:1;"><i>(03.02.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <i>This version changes the numbering scheme of public betas to include date in the DDMMYY format instead of whatever beta this is.</i>
          </li>
@@ -438,7 +464,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta4</h2>
       <small style="margin:1;"><i>(18.01.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Added an <b>initial implementation of the <a href="/blog">blog</a>!</b> Posts from the v1 website have been ported there.
          </li>
@@ -452,7 +478,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta3</h2>
       <small style="margin:1;"><i>(15.01.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             Proper <b>optimization for small form factors!</b> (e.g. phone and tablet screens)
          </li>
@@ -466,7 +492,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta2</h2>
       <small style="margin:1;"><i>(15.01.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             The background has been changed <b>to an animated gradient</b>, and the font size has been adjusted to be larger.
          </li>
@@ -489,7 +515,7 @@ import Layout from '../layouts/Site.astro';
       <br>
       <h2 id="section">2.0-beta1</h2>
       <small style="margin:1;"><i>(11.01.2025)</i></small>
-      <ul id="list">
+      <ul class="list">
          <li>
             <i>Initial public beta release! This changelog includes differences from the final v1 release.</i>
          </li>
