@@ -17,7 +17,7 @@ With everything out of the way, the A23 5G was an actually good midrange Galaxy 
 
 However at the end of the day I just ended up getting a different phone: the **Galaxy A26 5G**. To my defense, it was just given to me in an all-new condition, *literally waiting to be set up. It was already powered on displaying the first-time setup experience*. I was literally just handed over the phone with its entire box and its contents, that's it.
 
-![i use android btw](http://clyron.is-a.dev/img/blog/41.png)
+![i use android btw](http://kay.is-a.dev/img/blog/41.png)
 *i use android btw*
 
 ## Basic specifications
@@ -49,7 +49,7 @@ Other than that, nothing much really significant about the A26 versus A23.
 ## The software
 As previously said above, the Galaxy A26 5G comes with Android 15 (One UI 7). Unlike the A23 5G, the A26 5G is entitled for **6 major Android version upgrades**, which is a huge step-up meaning I won't have to worry about missing any new Android version for a while
 
-![](http://clyron.is-a.dev/img/blog/39.png)
+![](http://kay.is-a.dev/img/blog/39.png)
 
 Now say what you want about it but One UI 7 for me personally *geniunely feels like a refresher* compared to every previous One UI since 2019. At first when I saw One UI 7's look I was like eh, but when actually using it, it geniunely feels like a "new and exciting" thing, and so far never ran into any issues with the software specifically.
 
@@ -73,13 +73,13 @@ For some reason, just like with case with seamless updates (which I've already t
 ## The camera
 The A26 5G camera has more features than the A23 5G's. We have especially new modes like Hyperlapse, Single Take, Pro Video and Super Slo-Mo.
 
-![](http://clyron.is-a.dev/img/blog/38.png)
+![](http://kay.is-a.dev/img/blog/38.png)
 
 One major feature not present on the A23 5G is the ability to change the shutter speed, possible on the A26 5G either by adjusting speed in Pro Video mode, or alternatively by enabling Super Steady in the main video mode, which I guess could help when trying to shoot from the window of a moving vehicle for example. None of such videos I made with previous phones turned out to be good. Will only have to test the next time I go on a trip though, then I can come to a conclusion.
 
 Oh, and as a bonus, apparently we have Snapchat Lenses?? (which are actually just face filters). BTW you'd have to switch to the Fun mode for this, but I did it just for the sake of exploration.
 
-![](http://clyron.is-a.dev/img/blog/40.png)
+![](http://kay.is-a.dev/img/blog/40.png)
 
 ---
 ...aaaand the blog post is concluded just like that. How much time will I keep this phone as my main? Hopefully at least 2 years again if not longer. Time will tell

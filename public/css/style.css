@@ -55,6 +55,9 @@ a {
      padding-bottom: 16px;
      flex-grow: 1;
 }
+.section.nopadding {
+    padding: 0;
+}
 #eighteightthreeone {
     image-rendering: pixelated;
     padding-left: 2px;
@@ -66,6 +69,7 @@ a {
 }
 
 /* Modern Frontend */
+
     @supports (gap: 0.5em) {
    .tag {
        display: block;
@@ -191,7 +195,7 @@ a,
     font-size: 32px;
     font-family: "quicksand";
 }
-#section {
+.section {
     font-weight: bold;
     font-size: 24px;
     font-family: "quicksand";
@@ -267,6 +271,11 @@ button.button:disabled {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 768px) {
+    .navbar #link {
+    font-size: 25px;
+  }
+}
 }
 @media (min-width: 768px) {
   .content {
@@ -276,9 +285,6 @@ button.button:disabled {
   }
   .blogpost img {
     max-width: 80%;
-  }
-  .navbar #link {
-    font-size: 25px;
   }
 }
 @media (min-width: 1024px) {
