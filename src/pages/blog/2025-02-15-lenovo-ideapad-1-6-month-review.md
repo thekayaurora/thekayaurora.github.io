@@ -34,13 +34,13 @@ As of now I no longer own my previous laptop, it's basically an identical body t
 When first powering on the "new" current laptop, I actually went in the BIOS first... and surprise, surprise, we have a GUI!
 As opposed to the non-GUI "Lenovo Setup Utility" of my previous laptop, you have a cursor that you can use to browse around
 
-![](http://kay.is-a.dev/img/blog/29.jpg)
+![](/img/blog/29.jpg)
 
 Clearly the UEFI here is different. It was easy for me to notice - on my previous laptop, the GRUB menu would appear when powering it on. However on my current laptop, the Lenovo logo would show up first before the GRUB menu, so if you choose to boot to Windows you will only get the loading circle without any logo
 
 Unless you change the boot order in BIOS so that Windows Boot Manager is first, you would end up with this (FYI that this was when my distro of choice was Debian)
 
-![](http://kay.is-a.dev/img/blog/30.png)
+![](/img/blog/30.png)
 
 It doesn't bother me, but it was just something I felt like pointing out
 
@@ -74,7 +74,7 @@ After playing several heavy games or the games I previously played on previous m
 
 In the past month I've been playing quite a bit of Minecraft Java on this machine and just cannot not notice the fact it is playable even with more intensive graphics (e.g. Shaders or max Render Distance)
 
-![](http://kay.is-a.dev/img/blog/31.png)
+![](/img/blog/31.png)
 
 Of course it shouldn't mean you *should* actually play MC on this PC with shader and max render distance all the time, sure it looks cool and all in some circumstances but I'd still prefer render distance set to 16 and no shader
 
@@ -108,7 +108,7 @@ However, I recently "distrohopped" (actually almost a month ago)...
 Soooo yes, now I can say that *i use arch btw*. ln late January, I decided to make the switchover from Debian to Arch Linux. So far it really didn't disappoint me at all, haven't looked back
 (I was initially gonna make a separate blog post about this but ultimately gave up on it, so here's just some quick two-three words to say)
 
-![](http://kay.is-a.dev/img/blog/32.png)
+![](/img/blog/32.png)
 
 All I can explain is that I actually installed Arch on this laptop "the hard way". In other words, using individual commands, not scripts e.g. `archinstall` (for the uninitiated, the Arch installer is a command-line interface (CLI), as opposed to the GUI in installers of Debian or Ubuntu)
 

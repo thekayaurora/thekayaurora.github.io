@@ -45,7 +45,7 @@ Important to keep in mind is that the `@supports` rule has been only available a
 
 So as of right now this website **loads on IE11 well enough** to say. 
 
-![](http://kay.is-a.dev/img/blog/42.png)
+![](/img/blog/42.png)
 
 There are several issues that still need to be addressed like the whole "click to copy 88x31 HTML code to clipboard thing" not working or the footer and webrings not being properly centered (which can be attributed to IE11's flexbox support being pretty "ehhy")
 
@@ -57,7 +57,7 @@ So on to the next phase of bringing this website to work on ancient browsers!\
 
 For this phase I decided to set up a VM with Windows XP *MCE 2005* <small>(I usually do Professional but decided to try something different)</small>, which came with Internet Explorer 7 out of the box. Here's v3.0 of this website on IE7:
 
-![](http://kay.is-a.dev/img/blog/43.png)
+![](/img/blog/43.png)
 
 I was expecting something better. Even worse, between the "*Hi there!~*" and the navbar there is a singular weird shape (which is actually a partial star). I was able to easily get this issue addressed (at least for IE) by moving the CSS code associated with the stars in the navbar inside a `@supports`.
 
@@ -70,7 +70,7 @@ I've already fixed the star issue for IE as said earlier, but for some reason Pr
 
 Meanwhile on Safari, we have what I'd definitely call "the most cursed thing I have ever seen as a webdev": the lack of navbar. Like, *where did it go?!?!?*
 
-![](http://kay.is-a.dev/img/blog/45.png)
+![](/img/blog/45.png)
 
 Now maybe maaayybeeee it might not have been the "most cursed thing" after all. The problem here was that the animation just wasn't playing in Safari, to put it in simple words. So the whole navbar was stuck at zero opacity. I moved all CSS code associated with the navbar's animations inside a `@supports` and that fixed it!\
 Of course there were other issues (like links or blog tags not displaying properly) but like with other aspects of the site, I've also resorted to fallbacks here as well <small>(the power of `@supports` frfr)</small>
@@ -81,7 +81,7 @@ Another issue was that images in blog posts did not load at all. For some reason
 
 Aaaand there you have it. A website **that works on browsers as old as IE7, Opera Presto and Safari on Windows**.
 
-![](http://kay.is-a.dev/img/blog/46.png)
+![](/img/blog/46.png)
 
 As you can see I also decided to try monospaced fonts as a fallback if the default font(s) do not load. I am not sure-sure if I like it or not, but at this point *I have more ambitious ideas in mind, which I'm however leaving for until the right time comes :p*.
 
@@ -114,7 +114,7 @@ The current website layout is well suited as it's mostly text, as opposed to car
 To start with, I went to look up for a good background image for a 90s website. So the first thing I did was google "*good backgrounds for retro website*". However that turned out to be the best example of Google not giving relevant search results that I could get.\
 Most of the search results were """retro backgrounds""" sourced from stock image providers that have literally have nothing to do with what I'm searching for! And y'know what's the most hilarious part? The "People also search for" checkbox:
 
-![](http://kay.is-a.dev/img/blog/47.png)
+![](/img/blog/47.png)
 
 Yes Google you can be sure if I search for 90s site backgrounds, I also search for AI Image Editing tools. Two things from two different internet eras...\
 Jokes aside, in the end I found [GifCities](https://gifcities.org/) *from Internet Archive themselves* where I was finally able to find exactly what I was looking for~
@@ -129,7 +129,7 @@ I was able to finally hide the stars in Presto now knowing what's actually going
 Anyway, now that we have a Retro Frontend, that now ensures support for browsers as old as IE5!\
 So, as a matter of fact, ***it is now possible to access this website on OSes as old as Windows 95!*** <small>(an almost 30-year-old OS!)</small>
 
-![](http://kay.is-a.dev/img/blog/48.png)
+![](/img/blog/48.png)
 
 It is actually super duper amazing that I managed to go down this far while not affecting the "modern frontend" *that much* and I honestly cannot wait to get this out (of "beta") :D
 
@@ -141,7 +141,7 @@ For the sake of it I decided to test this website on even older browsers. **Unfo
 Meanwhile I've also tested the website on **Netscape 4**, however it won't work with the website's CSS *at all*. The output is no different than if I just deleted or renamed `style.css` within my file manager then start the Astro dev server and preview the site locally on my modern browser\
 Same goes for basically any browser that lacks CSS support entirely, such as earlier versions of IE and Netscape etc. *Not the end of the world though*, we can adapt the HTML!
 
-![](http://kay.is-a.dev/img/blog/44.png)
+![](/img/blog/44.png)
 
 So there you have it, a **Plaintext Mode**. In theory this website should now be able to display almost-if-not-fully properly on every *graphical* web browser.\
 The only differences between this and the CSS Retro Frontend are the lack of a website background and lack of proper padding in some areas, *which are not really that big of a deal*.

@@ -1,8 +1,17 @@
+/* Fonts */
+@font-face {
+    font-family: "inter";
+    src: url("../css/fonts/inter.ttf");
+}
+@font-face {
+    font-family: "quicksand";
+    src: url("../css/fonts/quicksand.ttf");
+}
+
 /* Retro Frontend */
 html {
      background: url(../img/rf/bg.gif) repeat;
      color: white;
-     font-size: 17.5px;
     }
 pre, code {
     font-family: monospace;
@@ -69,30 +78,29 @@ a {
 }
 
 /* Modern Frontend */
-
-    @supports (gap: 0.5em) {
-   .tag {
-       display: block;
-       background-color: rgb(70, 82, 95);
-       color: rgb(189, 216, 229);
-       padding-top: 1px;
-       padding-bottom: 1px;
-       padding-left: 3px;
-       padding-right: 3px;
-       border-radius: 5px 5px 5px 5px;
-       border: 5px 5px 5px 5px white;
-       text-decoration: none !important;
-       font-style: normal;
-       transition: 0.2s;
+@supports (gap: 0.5em) {
+.tag {
+    display: inline-block;
+    background-color: rgb(72, 70, 95);
+    color: rgb(221, 213, 244);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px 5px 5px 5px;
+    border: 5px 5px 5px 5px white;
+    text-decoration: none !important;
+    font-style: normal;
+    transition: 0.2s;
   }
-  #tagarray {
-      display: inline-flex;
-      gap: 0.5em;
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
+#tagarray {
+    display: inline-flex;
+    gap: 0.5em;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
    }
-   .stars {
+.stars {
     position: fixed;
     inset: 0;
     pointer-events: none;
@@ -111,22 +119,24 @@ a {
     animation-delay: 0.9s
 }
 .star1 { width: 30px; height: 30px; top: 5vh; left: 10vw; }
-.star2 { width: 25px; height: 25px; top: 8vh; left: 30vw; }
 .star3 { width: 35px; height: 35px; top: 10vh; left: 50vw; }
-.star4 { width: 28px; height: 28px; top: 6vh; left: 70vw; }
 .star5 { width: 32px; height: 32px; top: 12vh; left: 85vw; }
+
+@media (min-width: 768px) {
+.star2 { width: 25px; height: 25px; top: 8vh; left: 30vw; }
+.star4 { width: 28px; height: 28px; top: 6vh; left: 70vw; }
+}
 }
 @supports (display: flex) {
 html {
     background-size: 100% 300px, auto;
     background: linear-gradient(
     to bottom,
-      rgb(7, 40, 54) 0px,      
-      rgb(28, 42, 51) 150px
-    ) no-repeat, rgb(28, 42, 51);
-    background-color: rgb(28, 42, 51);
-    color: rgb(189, 216, 229);
-    font-size: 1.1rem;
+      rgb(50, 43, 65) 0px,
+      rgb(40, 40, 57) 150px
+    ) no-repeat, rgb(40, 40, 57);
+    background-color: rgb(40, 40, 57);
+    color: rgb(221, 213, 244);
     font-family: "inter", monospace, sans-serif;
 }
 .content {
@@ -144,7 +154,7 @@ html {
 a,
 .navbar #link,
 #postlink {
-     color: rgb(189, 216, 229);
+     color: rgb(221, 213, 244);
 }
 .list {
     margin-top: 3px;
@@ -159,10 +169,10 @@ a,
     padding-top: 3px;
     padding-bottom: 3px;
 }
-  #rssfallback {
+#rssfallback {
     display: none;
   }
-  .head.hasbtn .button {
+.head.hasbtn .button {
     padding-top: 15px;
     padding-bottom: 15px;
     display: block;
@@ -190,14 +200,17 @@ a,
     margin: 0 auto;
     padding-bottom: 1%;
 }
-#title {
+h1, #title {
     font-weight: bold;
     font-size: 32px;
     font-family: "quicksand";
 }
-.section {
+h2, .section {
     font-weight: bold;
     font-size: 24px;
+    font-family: "quicksand";
+}
+h3, h4, h5, h6 {
     font-family: "quicksand";
 }
 #postlink {
@@ -230,6 +243,7 @@ a,
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
+    will-change: transform;
 }
 #link:hover::after,
 #link:focus::after,
@@ -238,8 +252,8 @@ a,
     transform: translateX(-50%) scaleX(1);
 }
 a.button, button.button {
-      background-color: rgb(70, 82, 95);
-      color: rgb(189, 216, 229);
+      background-color: rgb(72, 70, 95);
+      color: rgb(221, 213, 244);
       padding-top: 5px;
       padding-bottom: 5px;
       padding-left: 10px;
@@ -250,10 +264,10 @@ a.button, button.button {
       transition: 0.2s;
   }
 a.button:hover, .navbtn:hover, .tag:hover, button.button:hover {
-    background-color: rgb(58, 66, 75);
+    background-color: rgb(58, 58, 75);
 }
 button.button:disabled {
-    background-color: rgb(70, 82, 95);
+    background-color: rgb(72, 70, 95);
     opacity: 0.5;
     cursor: not-allowed;
 }
@@ -263,7 +277,7 @@ button.button:disabled {
     animation-fill-mode: both;
 }
 #eighteightthreeone:hover {
-    box-shadow: 0 2px 8px rgba(189, 216, 229, .3);
+    box-shadow: 0 2px 8px rgba(221, 213, 244, .3);
     text-decoration: none !important;
 }
 .head.hasbtn {
@@ -273,18 +287,12 @@ button.button:disabled {
 }
 @media (min-width: 768px) {
     .navbar #link {
-    font-size: 25px;
+       font-size: 25px;
   }
-}
-}
-@media (min-width: 768px) {
-  .content {
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 16px;
-  }
-  .blogpost img {
-    max-width: 80%;
+    .content {
+       margin-left: 100px;
+       margin-right: 100px;
+       padding: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -292,9 +300,6 @@ button.button:disabled {
     margin-left: 200px;
     margin-right: 200px;
     padding: 16px;
-  }
-  .blogpost img {
-    max-width: 65%;
   }
 }
 @keyframes slide {
@@ -312,11 +317,17 @@ button.button:disabled {
     50% { transform: translate(5px, 3px) rotate(180deg); }
     100% { transform: translate(0, 0) rotate(360deg); }
 }
-@font-face {
-    font-family: "inter";
-    src: url("../css/fonts/inter.ttf");
 }
-@font-face {
-    font-family: "quicksand";
-    src: url("../css/fonts/quicksand.ttf");
+@media (min-width: 768px) {
+  .blogpost img {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+   html {
+    font-size: 17.5px;
+  }
+   .blogpost img {
+    max-width: 65%;
+  }
 }

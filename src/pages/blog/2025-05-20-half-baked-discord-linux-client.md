@@ -13,8 +13,8 @@ Seemingly (almost) every single week, Discord releases a new update for the clie
 
 Especially for one who is on Debian or Debian-based distros (e.g. Ubuntu) and uses the .deb packaging, chances are at least a good chunk of your Downloads folder is just Discord .deb files (unless you keep your stuff organized all the time):
 
-![](http://kay.is-a.dev/img/blog/33.png)
-![](http://kay.is-a.dev/img/blog/34.png)
+![](/img/blog/33.png)
+![](/img/blog/34.png)
 
 ***You cannot get past this screen at all.*** You're forced to having to *manually* update Discord every time, either (in the presented case above) by downloading .deb file from Discord's site everytime, or even using the package manager in the terminal etc, depending from where you got the Discord client.
 
@@ -30,10 +30,10 @@ All things aside, it's a classic. The update system *could've been better than t
 I don't know about other desktop environments if it's any different or not, but at least on KDE (afaik it's also the same on GNOME and XFCE, probably basically everywhere), the title bar of the Discord app is just the *native* one of the OS.
 
 Cherry on top, when logged out, the title bar would just display this:
-![](http://kay.is-a.dev/img/blog/35.png)
+![](/img/blog/35.png)
 
 It became even weirder was when Discord rolled out its desktop+web redesign last March:
-![](http://kay.is-a.dev/img/blog/37.png)
+![](/img/blog/37.png)
 
 A "feature" of the desktop+web redesign is the "new title bar" that displays the server name and icon and also contains the Inbox and Help buttons on the right side. In Windows and macOS, there would also be buttons for minimizing, maximizing and closing directly integrated. This is not the case for Linux, so the Linux client now literally has two title bars!
 
