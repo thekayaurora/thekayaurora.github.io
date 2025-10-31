@@ -19,10 +19,10 @@ import Footer from '../components/Footer.astro';
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <meta property="og:site_name" content=`${d.shortname}'s website!` />
-        <meta property="og:image" content=`${Astro.site}${d.logo}`>
+        <meta property="og:image" content=`${Astro.site}${d.favicon}`>
         <meta name="title" content={title} />
 		<meta name="description" content={desc} />
-		<link rel="icon" type="image/svg+xml" href=`${Astro.site}${d.favicon}` />
+		<link rel="icon" type="image/svg+xml" href=`https://${d.domain}${d.favicon}` />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
         <link rel="stylesheet" href="../../css/style.css" type="text/css">

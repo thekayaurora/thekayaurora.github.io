@@ -1,4 +1,7 @@
 export const d = {
+  domain: "kay.is-a.dev", // The site's domain/subdomain. 
+                          // Required for the favicon as modern browsers restrict loading favicons under HTTP on HTTPS
+                          // Do not forget to also include the site's domain/subdomain in the astro.config.mjs file
   name: "KayAurora", // The name of the owner of the site
   shortname: "Kay", // Shorter form of the name of the owner of the site, Mostly used in introductions or as an alternative to the longer name.
   favicon: "/img/logotype.png", // The site's favicon
