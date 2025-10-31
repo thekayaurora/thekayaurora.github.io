@@ -39,17 +39,7 @@ taggedPosts.sort(
 );
 ---
 
-<Layout title="Blog">
-      <div class="head hasbtn">
-      <div>
-      <h1 id="title">✏️ Blog!</h1>
-      <div>Posts tagged with <code>{tag}</code>. <a href="/tags">View all tags</a></div>
-      <div><a href="../feed.xml" class="mof--hidden">Also available on RSS!</a></div>
-      </div>
-      <div>
-      <a class="button rf--hidden" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a>
-      </div>
-   </div>
+<Layout title="Blog" head="✏️ Blog!" desc=`Posts tagged with <code>${tag}</code>. <a href='/tags'>View all tags</a>`` showRssButton={true}>
     {taggedPosts.map((post) => 
     <div id="blog">
         <ul>

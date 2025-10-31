@@ -3,5 +3,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   integrations: [],
-  site: "https://kay.is-a.dev",
+  site: "http://kay.is-a.dev",
 });

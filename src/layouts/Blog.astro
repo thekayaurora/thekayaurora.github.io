@@ -10,11 +10,11 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta property="og:site_name" content=`${d.shortname}'s website` />
-    <meta property="og:image" content={d.logo}>
+    <meta property="og:site_name" content=`${d.shortname}'s blog!` />
+    <meta property="og:image" content=`${Astro.site}${d.logo}`>
     <meta name="title" content={frontmatter.title} />
     <meta name="description" content={frontmatter.desc} />
-    <link rel="icon" type="image/svg+xml" href={d.favicon} />
+    <link rel="icon" type="image/svg+xml" href=`${Astro.site}${d.favicon}` />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
     <link rel="stylesheet" href="../../css/style.css" type="text/css">
@@ -23,7 +23,7 @@ import Footer from '../components/Footer.astro';
 	<body>
     <Navbar />
         <div class="content blogpost">
-        <div class="head">
+        <div class="head blog">
         <h1 id="title">{frontmatter.title}</h1>
         <div>{frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
         <div>{frontmatter.tags && (<ul id="tagarray" class="rf--hidden">{frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>

@@ -21,17 +21,7 @@ posts.sort((a, b) => {
 });
 ---
 
-<Layout title="Blog">
-    <div class="head hasbtn">
-      <div>
-      <h1 id="title">✏️ Blog!</h1>
-      <div>Various talk!</div>
-      <div><a href="../feed.xml" class="mof--hidden">Also available on RSS!</a></div>
-      </div>
-      <div>
-      <a class="button rf--hidden" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a>
-      </div>
-   </div>
+<Layout title="Blog" head="✏️ Blog!" desc="Various talk! <a href=''../feed.xml' class='mof--hidden'>Also available on RSS!</a>" showRssButton={true}>
     {posts.map((post) => 
     <div id="blog">
         <ul>

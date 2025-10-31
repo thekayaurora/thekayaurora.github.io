@@ -1,8 +1,13 @@
 ---
 interface Props {
 	title: string;
+	head?: string;
+	desc: string;
+	showRssButton?: boolean;
+	hideFooter?: boolean;
 }
-const { title } = Astro.props;
+const { title, head, desc, showRssButton = false, hideFooter = false } = Astro.props;
+const heading = head || title;
 import { d } from "../config";
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -13,11 +18,11 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta property="og:site_name" content=`${d.shortname}'s website` />
-        <meta property="og:image" content={d.logo}>
+        <meta property="og:site_name" content=`${d.shortname}'s website!` />
+        <meta property="og:image" content=`${Astro.site}${d.logo}`>
         <meta name="title" content={title} />
-		<meta name="description" content="" />
-		<link rel="icon" type="image/svg+xml" href={d.favicon} />
+		<meta name="description" content={desc} />
+		<link rel="icon" type="image/svg+xml" href=`${Astro.site}${d.favicon}` />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
         <link rel="stylesheet" href="../../css/style.css" type="text/css">
@@ -26,8 +31,21 @@ import Footer from '../components/Footer.astro';
 	<body>
         <Navbar />
          <div class="content">
+			<div class="head">
+			   <div>
+               <h1 id="title">{heading}</h1>
+               <div set:html={desc}></div>
+			   </div>
+			   <div>
+				{ showRssButton && (
+				<a class="button rf--hidden" href="../feed.xml" title="RSS Feed"><i class="fas fa-rss fa-xl"></i></a> 
+				)}
+			   </div>
+            </div>
 		<slot />
 		</div>
+		{ !hideFooter && (
 		<Footer />
+		)}
 	</body>
 </html>

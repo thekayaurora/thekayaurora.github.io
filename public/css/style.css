@@ -1,11 +1,11 @@
 /* Fonts */
 @font-face {
-    font-family: "inter";
-    src: url("../css/fonts/inter.ttf");
-}
-@font-face {
     font-family: "quicksand";
     src: url("../css/fonts/quicksand.ttf");
+}
+@font-face {
+    font-family: "atkinson";
+    src: url("../css/fonts/atkinson.ttf");
 }
 
 /* Retro Frontend */
@@ -58,11 +58,20 @@ a {
     height: auto;
     margin: 16px auto;
 }
+.blogpost h1 {
+    padding-top: 15px;
+}
 .head,
 .section {
      padding-top: 16px;
      padding-bottom: 16px;
      flex-grow: 1;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.head.blog, .section {
+     display: block;
 }
 .section.nopadding {
     padding: 0;
@@ -76,6 +85,12 @@ a {
 #nocss {
     display: none;
 }
+@media (min-width: 1024px) {
+   html {
+    font-size: 17.5px;
+  }
+}
+
 
 /* Modern Frontend */
 @supports (gap: 0.5em) {
@@ -137,7 +152,7 @@ html {
     ) no-repeat, rgb(40, 40, 57);
     background-color: rgb(40, 40, 57);
     color: rgb(221, 213, 244);
-    font-family: "inter", monospace, sans-serif;
+    font-family: "atkinson", monospace, sans-serif;
 }
 .content {
     padding-top: 16px;
@@ -145,7 +160,7 @@ html {
 }
 .blogpost p,
 .blogpost li {
-    line-height: 1.3;
+    line-height: 1.4;
 }
 .center {
     display: block;
@@ -172,7 +187,7 @@ a,
 #rssfallback {
     display: none;
   }
-.head.hasbtn .button {
+.head .button {
     padding-top: 15px;
     padding-bottom: 15px;
     display: block;
@@ -202,12 +217,19 @@ a,
 }
 h1, #title {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 34px;
     font-family: "quicksand";
 }
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
 h2, .section {
     font-weight: bold;
-    font-size: 24px;
     font-family: "quicksand";
 }
 h3, h4, h5, h6 {
@@ -215,7 +237,7 @@ h3, h4, h5, h6 {
 }
 #postlink {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 30px;
     font-family: "quicksand";
 }
 #link,
@@ -280,11 +302,6 @@ button.button:disabled {
     box-shadow: 0 2px 8px rgba(221, 213, 244, .3);
     text-decoration: none !important;
 }
-.head.hasbtn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 @media (min-width: 768px) {
     .navbar #link {
        font-size: 25px;
@@ -300,6 +317,19 @@ button.button:disabled {
     margin-left: 200px;
     margin-right: 200px;
     padding: 16px;
+  }
+  html {
+    font-size: 19.5px;
+  }
+}
+@media (min-width: 768px) {
+  .blogpost img {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+   .blogpost img {
+    max-width: 65%;
   }
 }
 @keyframes slide {
@@ -317,17 +347,4 @@ button.button:disabled {
     50% { transform: translate(5px, 3px) rotate(180deg); }
     100% { transform: translate(0, 0) rotate(360deg); }
 }
-}
-@media (min-width: 768px) {
-  .blogpost img {
-    max-width: 80%;
-  }
-}
-@media (min-width: 1024px) {
-   html {
-    font-size: 17.5px;
-  }
-   .blogpost img {
-    max-width: 65%;
-  }
 }

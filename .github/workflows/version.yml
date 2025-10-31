@@ -1,0 +1,63 @@
+name: Determine Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Determine version
+        id: version
+        run: |
+          YY=$(date +'%y')
+          M=$(date +'%m' | sed 's/^0//')
+          PREFIX="v${YY}.${M}"
+
+          # Find last tag for this month
+          LAST_TAG=$(git tag --list "${PREFIX}*" | sort -V | tail -n 1)
+
+          if [ -z "$LAST_TAG" ]; then
+            NEW_TAG="${PREFIX}"
+          else
+            if [[ "$LAST_TAG" =~ ^v[0-9]{2}\.[0-9]{1,2}\.([0-9]+)$ ]]; then
+              LAST_REV=${BASH_REMATCH[1]}
+              NEW_REV=$((LAST_REV + 1))
+              NEW_TAG="${PREFIX}.${NEW_REV}"
+            else
+              NEW_TAG="${PREFIX}.1"
+            fi
+          fi
+
+          echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
+          echo "Version determined: $NEW_TAG"
+
+      - name: Update package.json version
+        run: |
+          npm pkg set version=${NEW_TAG#v}
+          git add package.json
+          git commit -m "chore: bump version to ${NEW_TAG}" || echo "No changes to commit"
+
+      - name: Tag repo
+        run: |
+          git tag $NEW_TAG
+          git push origin $NEW_TAG
+          git push
+
+      - name: Build and deploy site
+        run: |
+          npm ci
+          npm run build

@@ -4,23 +4,16 @@ import Layout from '../layouts/Site.astro';
 import Buttons from '../components/Buttons.astro';
 ---
 
-<Layout title="Home">
-   <div class="head">
-      <h1 id="title">👋 Hi there!~</h1>
-      <div>You landed on <b>{d.name}</b>'s personal website! ^w^</div>
-   </div>
+<Layout title="Home" head="👋 Hi there!~" desc=`You landed on <b>${d.name}</b>'s personal website! ^w^`>
       <div>Who I am:
         <ul class="list nobullet">
-        <li>💻 <b>I am a tech (mainly software) nerd</b> and.. I perhaps use it way too much <i><small>(<a href="/devices">list of devices</a>)</small></i></li>
-        <li>🌲 <b>I like exploring the outdoors</b> and taking photos out of various natural sights <i><small>(yes i actually touch grass wdym-)</small></i></li>
-        <li>💿 <b>Additionally interested</b> in perservation/archiving, occasional gaming etc.</li>
+        <li>💻 <b>I am a tech (mainly software) nerd</b> who happens to know a thing or two about coding <i><small>(<a href="/devices">list of devices</a>)</small></i></li>
+        <li>📹 <b>I occasionally make videos</b> on YouTube about things I enjoy~</li>
+        <li>💖 <b>Additionally into</b> exploring the outdoors <i><small>(touching grass™)</small></i>, media perservation, gaming etc.</li>
         </ul>
         <br>
         <div><b>Pronouns:</b> {d.pronouns} <small><i>(I don't care :p)</i></small></div>
         <div><b>Timezone:</b> UTC{d.tz}</div>
-        <br>
-        <div>You can view my projects <a href="/projects">here</a>&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i>, and if you just wanna hit me up, <a href="/socials">here</a>&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i>.</div>
-        <div>I also have a blog documenting various things, <a href="/blog">here</a>&nbsp;<i class="fas fa-arrow-up-right-from-square fa-xs"></i>.</div>
       </div>
    </div>
     <Buttons />

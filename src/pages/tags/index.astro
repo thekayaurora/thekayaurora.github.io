@@ -4,13 +4,7 @@ const posts = Object.values(import.meta.glob('../blog/*.md', { eager: true }));
 const tags = [...new Set(posts.map((post: any) => post.frontmatter.tags).flat())];
 ---
 
-<Layout title="Blog">
-      <div class="head">
-      <div>
-      <h1 id="title">✏️ Blog!</h1>
-      <div>List of all tags!</div>
-      </div>
-   </div>
+<Layout title="Blog" head="✏️ Blog!" desc="List of all tags!">
         {tags.map((tag) => (
       <p><a class="tag" href={`/tags/${tag}`}>{tag}</a></p>
     ))}
