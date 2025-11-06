@@ -58,7 +58,8 @@ a {
     height: auto;
     margin: 16px auto;
 }
-.blogpost h1 {
+.blogpost h1,
+.blogpost h2 {
     padding-top: 15px;
 }
 .head,
@@ -87,10 +88,9 @@ a {
 }
 @media (min-width: 1024px) {
    html {
-    font-size: 17.5px;
+    font-size: 20px;
   }
 }
-
 
 /* Modern Frontend */
 @supports (gap: 0.5em) {
@@ -311,6 +311,9 @@ button.button:disabled {
        margin-right: 100px;
        padding: 16px;
   }
+    pre, code {
+       font-size: 17.5px;
+}
 }
 @media (min-width: 1024px) {
   .content {
