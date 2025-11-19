@@ -153,6 +153,7 @@ html {
     background-color: rgb(40, 40, 57);
     color: rgb(221, 213, 244);
     font-family: "atkinson", monospace, sans-serif;
+    font-size: 19.5px;
 }
 .content {
     padding-top: 16px;
@@ -302,6 +303,35 @@ button.button:disabled {
     box-shadow: 0 2px 8px rgba(221, 213, 244, .3);
     text-decoration: none !important;
 }
+details {
+      border-radius: 15px 15px 15px 15px;
+      border: 2px solid white;
+      margin: 10px;
+      padding: 15px;
+}
+details > *:not(summary) {
+    padding-top: 10px;
+}
+summary::-webkit-details-marker,
+summary::marker { 
+    display: none; 
+}
+summary {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  flex-grow: 1;
+  user-select: none;
+}
+summary::before {
+  content: "►";
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+details[open] summary::before {
+  content: "▼";
+}
 @media (min-width: 768px) {
     .navbar #link {
        font-size: 25px;
@@ -320,9 +350,6 @@ button.button:disabled {
     margin-left: 200px;
     margin-right: 200px;
     padding: 16px;
-  }
-  html {
-    font-size: 19.5px;
   }
 }
 @media (min-width: 768px) {
