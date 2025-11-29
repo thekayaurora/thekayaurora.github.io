@@ -60,6 +60,12 @@ jobs:
       - name: Determine version
         id: version
         run: |
+            CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(src/pages/blog/|public/img/blog/)' || true)
+
+         if [ -z "$CHANGED" ]; then
+          echo "Only blog content changed, skipping version bump"
+          echo "SKIP_VERSION=true" >> $GITHUB_ENV
+         else
           YY=$(date +'%y')
           M=$(date +'%m' | sed 's/^0//')
           PREFIX="v${YY}.${M}"
@@ -82,11 +88,13 @@ jobs:
           echo "Determined version: $NEW_TAG"
 
       - name: Tag repo
+        if: env.SKIP_VERSION != 'true'
         run: |
           git tag -f $NEW_TAG
           git push origin $NEW_TAG || git push --tags
 
-      - name: Update package.json version
+      - name: Update version in package.json
+        if: env.SKIP_VERSION != 'true'
         run: |
           npm pkg set version=${NEW_TAG#v}
           cat package.json
