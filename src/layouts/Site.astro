@@ -29,6 +29,7 @@ import Footer from '../components/Footer.astro';
 		<title>{title} ~ {d.name}</title>
 	</head>
 	<body>
+		<div style="margin:8px">
         <Navbar />
          <div class="content">
 			<div class="head">
@@ -47,5 +48,6 @@ import Footer from '../components/Footer.astro';
 		{ !hideFooter && (
 		<Footer />
 		)}
+		</div>
 	</body>
 </html>

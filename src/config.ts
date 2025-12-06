@@ -10,7 +10,7 @@ export const d = {
   sourcecode: "thekayaurora/thekayaurora.github.io", // Location of the published source code, in format "username/repo". It has to be GitHub.
 
   pronouns: "Any", // Your pronouns
-  tz: "+2", // Your timezone
+  tz: "+1", // Your timezone
 
-  faver: "7.0.0", // The version of FontAwesome to use, for some of the icons
+  faver: "7.1.0", // The version of FontAwesome to use, for some of the icons
 };

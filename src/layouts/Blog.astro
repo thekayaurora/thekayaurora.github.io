@@ -21,6 +21,7 @@ import Footer from '../components/Footer.astro';
 		<title>{frontmatter.title} ~ {d.name}</title>
 	</head>
 	<body>
+    <div style="margin:8px">
     <Navbar />
         <div class="content blogpost">
         <div class="head blog">
@@ -33,5 +34,6 @@ import Footer from '../components/Footer.astro';
            </div>
          </div>
          <Footer />
+         </div>
 	</body>
 </html>

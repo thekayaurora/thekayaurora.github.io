@@ -109,6 +109,7 @@ body {
       rgb(50, 43, 65) 0px,
       rgb(40, 40, 57) 150px
     ) no-repeat, rgb(40, 40, 57);
+    margin: 0;
 }
 body::after {
   content: "";
