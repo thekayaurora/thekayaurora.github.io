@@ -60,10 +60,10 @@ jobs:
       - name: Determine version
         id: version
         run: |
-          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(src/pages/blog/|public/img/blog/)' || true)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(src/pages/blog/|public/img/blog/|LICENSE|README\.md|\.github/)' || true)
 
           if [ -z "$CHANGED" ]; then
-            echo "Only blog content changed, skipping version bump"
+            echo "No changes detected to the actual website source code, skipping version bump"
             echo "skip_version=true" >> $GITHUB_OUTPUT
           else
             YY=$(date +'%y')
