@@ -62,8 +62,17 @@ jobs:
         run: |
           CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(src/pages/blog/|public/img/blog/|LICENSE|README\.md|\.github/)' || true)
 
+          LAST_KNOWN_TAG=$(git tag --sort=-v:refname | head -n 1)
+
+          if [ -z "$LAST_KNOWN_TAG" ]; then
+            PKG_VERSION=$(node -p "require('./package.json').version")
+            LAST_KNOWN_TAG="v$PKG_VERSION"
+            echo "No existing tags found, falling back to package.json version"
+          fi
+
           if [ -z "$CHANGED" ]; then
             echo "No changes detected to the actual website source code, skipping version bump"
+            echo "NEW_TAG=$LAST_KNOWN_TAG" >> $GITHUB_ENV
             echo "skip_version=true" >> $GITHUB_OUTPUT
           else
             YY=$(date +'%y')
