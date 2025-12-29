@@ -104,7 +104,6 @@ jobs:
           git push origin $NEW_TAG || git push --tags
 
       - name: Update version in package.json
-        if: steps.version.outputs.skip_version != 'true'
         run: |
           npm pkg set version=${NEW_TAG#v}
           cat package.json
