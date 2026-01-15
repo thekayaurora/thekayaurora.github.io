@@ -17,7 +17,8 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href=`https://${d.domain}${d.favicon}` />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href=`https://use.fontawesome.com/releases/v${d.faver}/css/all.css`>
-    <link rel="stylesheet" href="../../css/style.css" type="text/css">
+		<link rel="stylesheet" href="/css/style.rf.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 		<title>{frontmatter.title} ~ {d.name}</title>
 	</head>
 	<body>
@@ -27,7 +28,7 @@ import Footer from '../components/Footer.astro';
         <div class="head blog">
         <h1 id="title">{frontmatter.title}</h1>
         <div>{frontmatter.date}&nbsp;&nbsp;•&nbsp;&nbsp;<i style="font-size:1.1rem">{frontmatter.desc || 'No description available'}</i></div>
-        <div>{frontmatter.tags && (<ul id="tagarray" class="rf--hidden">{frontmatter.tags.map(tag => (<li><a class="tag rf--hidden" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
+        <div>{frontmatter.tags && (<ul id="tagarray" class="">{frontmatter.tags.map(tag => (<li><a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a></li>))}</ul>)}</div>
         </div>
            <div>
 	        	<slot />
