@@ -192,8 +192,8 @@ details > *:not(summary) {
     padding-top: 10px;
 }
 summary::-webkit-details-marker,
-summary::marker { 
-    display: none; 
+summary::marker {
+    display: none;
 }
 summary {
    display: flex;
@@ -207,6 +207,9 @@ summary::before {
    margin-right: 10px;
    margin-top: 2px;
    transition: 0.2s;
+}
+summary .section {
+    padding: 0;
 }
 details[open] summary::before {
    transform: rotate(90deg);
