@@ -6,13 +6,10 @@ const { title } = Astro.props;
 ---
 <div>
   <br class="mof--hidden">
-  <details class="rf--hidden">
+  <details>
     <summary>
-      <div><h2 class="section nopadding">{title}</h2></div></summary>
-     <slot />
+      <h2 class="section">{title}</h2>
+    </summary> <!-- details and summary tags aren't supported on ancient browsers -->
+    <slot />
   </details>
-  <div class="mof--hidden">
-    <h2>{title}</h2>
-     <slot />
-  </div>
 </div>
